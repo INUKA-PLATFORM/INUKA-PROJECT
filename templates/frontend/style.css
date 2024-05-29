@@ -30,6 +30,16 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+nav .logo a{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(primary-color);
+    transition: 0.3s;
+}
+
+nav .logo a:hover{
+    color: var(primary-color-dark);
+}
 ul{
     display: flex;
     align-items: center;
@@ -52,3 +62,55 @@ ul li a:hover{
     border-bottom-color: var(secondary-color);
     color: var(text-dark);
 }
+
+.section{
+    background-color: var(extra-light);
+}
+
+.section_container {
+    min-height: 100vh;
+    max-width: var(max-width);
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span{
+    font-weight: 600;
+}
+
+.description{
+    line-height: 1.5rem;
+    color: var(text-light);
+    margin-bottom: 2rem;
+}
+
+.action_btn{
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+}
+
+.action_btn button{
+    font-size: 1rem;
+    font-weight: 600;
+    line: spacing 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
