@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT INUKA</title>
-   
+   {}
     <!--External Css file link-->
    
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
@@ -40,9 +40,10 @@
                     Inuka is a feeding programme for campus students
                 </p>
                 <div class="action_btn">
-                    <button class="apply"><a href="signup.html">Enroll to Program</a></button>
+                    <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
                     <button class="donate">Feed a Student</button>
                     <p>hello {{nam}}</p>
+                   
                 </div>
             </div>
         </div>
