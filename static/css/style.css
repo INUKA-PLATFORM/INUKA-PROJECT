@@ -1,5 +1,5 @@
 :root{
-    background-color: #d9f2f2;
+    background-color: #f2e8d9;
     background-color-dark: #242c38;
     secondary-color: #f7f7f7;
     text-dark: #242c38;
@@ -16,7 +16,7 @@
 /*navigation menu Bar*/
 nav{
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     background-color: mintcream;
@@ -65,6 +65,7 @@ ul li a:hover{
 }
 
 .section{
+    margin-top: 200px;
     background-color: var(extra-light);
 }
 
@@ -79,6 +80,7 @@ ul li a:hover{
 }
 
 .title {
+    
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 3rem;
