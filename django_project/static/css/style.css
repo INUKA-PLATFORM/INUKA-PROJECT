@@ -21,6 +21,7 @@ nav{
     left: 0;
     background-color: mintcream;
     z-index: 99;
+    margin-bottom: 300px;
 }
 .nav_content{
     max-width: var(max-width);
