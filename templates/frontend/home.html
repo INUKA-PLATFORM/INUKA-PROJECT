@@ -1,15 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT INUKA</title>
-   {}
     <!--External Css file link-->
    
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
 </head>
 
 <body>
@@ -26,6 +26,7 @@
                 <li><a href="#">Cause</a></li>
                 <li><a href="#">Our Crew</a></li>
                 <li><a href="#">Donate</a></li>
+
             </ul>
         </div>
     </nav>
