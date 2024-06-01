@@ -1,5 +1,5 @@
 :root{
-    background-color: #f2e8d9;
+    background-color: #8790d9;
     background-color-dark: #242c38;
     secondary-color: #f7f7f7;
     text-dark: #242c38;
@@ -16,12 +16,12 @@
 /*navigation menu Bar*/
 nav{
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: mintcream;
     z-index: 99;
-    margin-bottom: 300px;
+    
 }
 .nav_content{
     max-width: var(max-width);
@@ -65,7 +65,7 @@ ul li a:hover{
 }
 
 .section{
-    margin-top: 200px;
+    margin-top: 6%;
     background-color: var(extra-light);
 }
 
@@ -113,7 +113,58 @@ ul li a:hover{
     border: 2px solid var(primary-color);
     border-radius: 10px;
     cursor: pointer;
+    
 }
 
-
-
+@media screen and (max-width: 768px){
+    nav .logo a{
+        font-size: 1rem;
+        width: 50%;
+    }
+    nav{
+        padding: 1rem;
+        display: flex;
+    }
+    ul{
+        display:flex;
+        position: relative;
+        top: 0;
+        left: 10px;
+        margin-right: 10px;
+        width: 20%;
+        background-color: var(primary-color);
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        transform: translateX(-100%);
+    }
+    ul.active{
+        transform: translateX(0);
+    }
+    ul li a{
+        padding: 1rem;
+        border: none;
+        color: var(secondary-color);
+    }
+    .section
+    {
+        margin-top: 30%;
+    }
+    .section_container{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .action_btn{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .action_btn button{
+        padding: 0.5rem 1rem;
+    }
+}
