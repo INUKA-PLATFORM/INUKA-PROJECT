@@ -9,3 +9,18 @@ def signup(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def concept_view(request):
+    return render(request, 'concept.html')
+
+def cause_view(request):
+    return render(request, 'cause.html')
+
+def ourcrew_view(request):
+    return render(request, 'ourcrew.html')
+
+def donate_view(request):
+    return render(request, 'donate.html')
+
+def aboutus_view(request):
+    return render(request, 'aboutus.html')
