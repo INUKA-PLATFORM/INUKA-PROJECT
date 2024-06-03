@@ -24,3 +24,9 @@ def donate_view(request):
 
 def aboutus_view(request):
     return render(request, 'aboutus.html')
+
+def login_view(request):
+    return render(request, 'login.html')
+
+def admin_view(request):
+    return render(request, 'admin.html')

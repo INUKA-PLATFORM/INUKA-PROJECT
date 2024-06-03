@@ -11,4 +11,6 @@ urlpatterns = [
     path('ourcrew', views.ourcrew_view, name='ourcrew'),
     path('donate', views.donate_view, name='donate'),
     path('aboutus', views.aboutus_view, name='aboutus'),
+    path('login', views.login_view, name='login'),
+    path('admin', views.admin_view, name='admin')
 ]
