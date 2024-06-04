@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/lulo-clean');
+
+@import url(https://db.onlinewebfonts.com/c/39a2c7f346d5cfae7045aeb2fb50d9ad?family=Lulo+Clean+W01+One+Bold);
+
+* {
+    font-family: 'Inter', sans-serif;
+    
+    box-sizing: border-box;
+}
+h3{
+    font-family: "Lulo Clean W01 One Bold";
+}
+#login-page {
+    background-image: url("/static/images/tiny.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+strong {
+    color: #023831;
+    font-weight: 900;
+    font-size: 3vh;
+}
+#register-btn {
+    font-weight: 900;
+    font-size: 3vh;
+}
+#login-slogan {
+    /* color: #133831; */
+    color: #1F4E3D;
+    font-weight: 900;
+    font-size: 3vh;
+    text-align: center;
+    padding: 3%;
+    font-family: "Lulo Clean W01 One Bold";
+    font-weight: 900;
+}
+
+#login-form {
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+#logo-login {
+    height: 100px;
+}
+#logo {
+    height: 35px;
+    width: 35px;
+}
+
+#nav {
+    background-color: #1F4E3D;
+    font-size: 1.5vh;
+}
+
+.img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+#button-card {
+    height: 15vh;
+    padding: 3%;
+}
+
+#par {
+    color: #133831;
+    font-weight: bold;
+    font-size: 3vh;
+
+}
+
+
+
+#login-buuton {
+    background-color: rgb(2, 56, 49);
+    font-weight: bold;
+    color: #ffc703;
+    font-size: 2vh;
+    padding: 2%;
+}
+.not-member {
+    font-size: 1.8vh;
+    color: #133831;
+}
+
+#facebook {
+    background-color: #ffc703;
+    color: #023831;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+}
+
+#twitter {
+    background-color: #023831;
+    color: #fff;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+
+}
+
+#google {
+    color: #023831;
+    font-size: 1.5vh;
+    font-weight: 700;
+    padding: 1%;
+    margin-right: 2%;
+}
+
+#login-btns {
+    margin-bottom: 3%;
+}
+#par-register {
+    font-size: 3vh;
+    color: #023831;
+    font-weight: 700;
+}
+#register-link,
+    #login-link {
+        background-color: #F7C35F;
+        font-size: 1.5vh;
+        color: #023831;
+        font-weight: 700;
+
+    }
+
+    #right {
+        background-color: #F7C35F;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #left {
+        background-color: #023831;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #register-page {
+        background-image: url("/static/images/tiny.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 94.5vh;
+
+    }
