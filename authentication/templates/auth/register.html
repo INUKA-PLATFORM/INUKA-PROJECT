@@ -1,0 +1,89 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid d-flex justify-content-center align-items-center" id="register-page">
+  <div class="col-md-5 mx-auto " id="register-card">
+    <div>
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert {{message.tags}} m-1 alert-danger mb-3" role="alert" style="font-size: medium;">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="card mx-auto register-card">
+      <!-- <div class=" card "> -->
+      <p class="text-center">
+        <img src="" alt="logo" id="logo-login">
+      </p>
+      <h4 class="mb-4 text-center">
+        <strong>EMPOWERING STUDENTS FEEDING DREAMS</strong>
+      </h4>
+      <p class="text-center" id="par-register">REGISTER</p>
+
+      <form method="post" class="col-md-10 mx-auto">
+        {% csrf_token %}
+        <div class="form-group first">
+          <label for="username">Username</label>
+          {{ form.username }}
+        </div>
+        <div class="form-group first">
+          <label for="email">Email</label>
+          {{ form.email}}
+        </div>
+        <div class="form-group last mb-4">
+          <label for="password">Password</label>
+          {{ form.password1 }}
+        </div>
+        <div class="form-group last mb-4">
+          <label for="password">Confirm Password</label>
+          {{ form.password2 }}
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <label class="control control--checkbox mb-0"><span class="caption">Student</span>
+              {{ form.is_student }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+          <div class="col-md-6">
+            <label class="control control--checkbox mb-0"><span class="caption">donor</span>
+              {{ form.is_donor }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </div>
+        <span class="text-error">{{ form.errors }}</span>
+        <input type="submit" value="Register With Inuka" class="btn btn-pill  btn-block mt-5"
+          id="login-buuton">
+      </form>
+      <!-- Register buttons -->
+      <div class="text-center p-2" id="login-btns">
+        <p class="not-member">or sign up with:</p>
+        <!-- facebook login button -->
+        <a class="btn" href="#!" role="button" id="facebook">
+          <i class="fab fa-facebook me-2"></i>
+          Facebook
+        </a>
+        <!-- twitter login button -->
+        <a class="btn text-white" id="twitter" href="#!" role="button">
+          <i class="fab fa-twitter me-2"></i>
+          Twitter
+        </a>
+        <!-- google login button -->
+        <a class="btn" id="google" href="#!" role="button">
+          <i class="fab fa-google me-2"></i>
+          Google
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
