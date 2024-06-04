@@ -1,0 +1,54 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block content %}
+
+<div class="container-fluid d-flex justify-content-center align-items-center" id="login-page">
+    <div class="col-md-5 mx-auto">
+        <div class="card mx-auto login-card">
+            <p class="text-center">
+                <img src="{% static 'images/hands.png'%}" alt="logo" id="logo-login">
+            </p>
+            <h4 id="login-slogan">INUKA</h4>
+            <p class="text-center" id="par">LOGIN</p>
+
+            <form method="POST" class="col-md-10 mx-auto">
+                {% csrf_token %}
+                <div class="form-group first">
+                    <label for="username" class="labele">Username</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group last mb-4">
+                    <label for="password" class="labele">Password</label>
+                    {{ form.password }}
+                </div>
+
+                <input type="submit" value="LOG IN TO OKOA FARM " class="btn btn-pill btn-block" id="login-buuton">
+            </form>
+
+            <!-- Register buttons -->
+            <div class="text-center p-2" id="login-btns">
+                <p class="not-member">Not a member? <a href="">Register</a></p>
+                <p class="not-member">or sign up with:</p>
+
+                <!-- facebook login button -->
+                <a class="btn" href="#!" role="button" id="facebook">
+                    <i class="fab fa-facebook me-2"></i>
+                    Facebook
+                </a>
+                <!-- twitter login button -->
+                <a class="btn text-white" id="twitter" href="#!" role="button">
+                    <i class="fab fa-twitter me-2"></i>
+                    Twitter
+                </a>
+                <!-- google login button -->
+                <a class="btn" id="google" href="#!" role="button">
+                    <i class="fab fa-google me-2"></i>
+                    Google
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
