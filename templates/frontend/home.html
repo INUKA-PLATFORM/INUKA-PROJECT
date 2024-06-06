@@ -15,7 +15,7 @@
             <div class="logo"><a href="#">KickOutHunger</a></div>
             <ul>
                 <li class="dropdown">
-                    <a href="{% url 'aboutus' %}">About Us</a>
+                    <a href="{% url 'aboutus' %}">About</a>
                     <ul class="dropdown-content">
                         <li><a href="{% url 'aboutus' %}">About Us</a></li>
                         <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
@@ -33,29 +33,35 @@
     <section class="section">
         <div class="section_container">
             <div class="content">
-                <h1 class="title">Welcome to <span>KickOutHunger</span></h1>
+                <h2 class="title">Welcome to <span>KickOutHunger initiative</span></h2>
                 <p class="inuka_brief">Inuka is a feeding programme for campus students</p>
-                <div class="action_btn">
-                    <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
-                    <button class="donate">Feed a Student</button>
-                </div>
+               
                 <div class="vision">
-                    <p>
-                        <h2>Vision</h2>
+                    <h3>Vision</h3>
+                    <p class="vision-p">
                         Our vision is to ensure that every university student in Kenya has consistent access to nutritious food, empowering them to excel academically and thrive personally.  
                     </p>
                 </div>
                 <div class="mission">
-                    <h2>Mission</h2>
-                    Food insecurity is a significant issue affecting countless university students. Many struggle to afford nutritious meals while balancing the demands of their academic pursuits. We aim to alleviate this burden by connecting these students with donors who are passionate about making a difference in their lives.    
+                    <h3>Mission</h3>
+                    <p class='Mission-p'>Food insecurity is a significant issue affecting countless university students. Many struggle to afford nutritious meals while balancing the demands of their academic pursuits. We aim to alleviate this burden by connecting these students with donors who are passionate about making a difference in their lives.</p>
+                        
+                </div>
+                <div class="action_btn">
+                    <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
+                    <button class="donate">Feed a Student</button>
                 </div>
             </div>
+            <div class="home-image">
+                <p> To hold the home image</p>
+            </div>
+            
         </div>
     </section>
     <div class="footer">
         <hr />
         <footer class="social">
-            <h2>Visit Our Social Media</h2>
+            <h4>Visit Our Social Media</h4>
             <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
             <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
