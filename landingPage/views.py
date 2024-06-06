@@ -17,7 +17,7 @@ def cause_view(request):
     return render(request, 'cause.html')
 
 def ourcrew_view(request):
-    return render(request, 'ourcrew.html')
+    return render(request, 'our-crew.html')
 
 def donate_view(request):
     return render(request, 'donate.html')
