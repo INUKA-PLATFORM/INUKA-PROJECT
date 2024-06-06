@@ -1,53 +1,52 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="author" content="slickplan.com">
-<title>About Us | PROJECT-INUKA</title>
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KickOutHunger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- External CSS file link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}?{% now 'U' %}" type="text/css">
 </head>
 <body>
-<div id="wrapper">
-<nav>
-<ul>
-<li><a href="index.html">Home page/ Landing Page</a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="cause.html">Cause</a></li>
-<li><a href="concept.html">Concept</a></li>
-<li>
-<a href="our-crew.html">Our Crew</a>
-<ul>
-<li><a href="our-crew/david.html">David</a></li>
-<li><a href="our-crew/martin.html">Martin</a></li>
-<li><a href="our-crew/barasa.html">Barasa</a></li>
-<li><a href="our-crew/vivian.html">Vivian</a></li>
-<li><a href="our-crew/yunis.html">Yunis</a></li>
-</ul>
-</li>
-<li>
-<a href="donate.html">Donate</a>
-<ul>
-<li><a href="donate/monthly-giving.html">Monthly giving</a></li>
-<li><a href="donate/one-time-gift.html">One Time Gift</a></li>
-<li>
-<a href="donate/corporate-partners.html">Corporate partners</a>
-<ul>
-<li><a href="donate/corporate-partners/partner-with-us.html">Partner with Us</a></li>
-</ul>
-</li>
-<li>
-<a href="donate/marchendise.html">Marchendise</a>
-<ul>
-<li><a href="donate/marchendise/gifts-in-kund.html">Gifts in Kund</a></li>
-<li><a href="donate/marchendise/students-work.html">Students work</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<div id="main">
-</div>
-</div>
+    <nav>
+        <div class="nav_content">
+            <div class="logo"><a href="#">KickOutHunger</a></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="{% url 'aboutus' %}">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'concept' %}">Concept</a></li>
+                <li><a href="{% url 'cause' %}">Cause</a></li>
+                <li><a href="{% url 'donate' %}">Donate</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="aboutUsdata">
+            <h1>About KickOutHunger</h1>
+            <p>
+                Welcome to Kickouthunger organization, our Crowdsourcing Organization, dedicated to helping university students overcome food insecurity through the generosity of donors. We believe that no student should have to choose between their education and their next meal. Our mission is to bridge the gap between students in need and the compassionate individuals and organizations willing to lend a helping hand.
+We encourage everyone to get involved, whether through donations, volunteering, or spreading the word about our cause. Together, we can make a significant impact and ensure that all students have the resources they need to thrive academically and personally. Join us in our mission to end student hunger and create a brighter future for all. 
+            </p>
+        </div>
+    </main>
+    <div class="footer">
+        <hr />
+        <footer class="social">
+            <h2>Visit Our Social Media</h2>
+            <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
+            <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        </footer>
+    </div>
 </body>
 </html>
