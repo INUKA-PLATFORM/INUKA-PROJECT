@@ -23,7 +23,7 @@ def donate_view(request):
     return render(request, 'donate.html')
 
 def aboutus_view(request):
-    return render(request, 'aboutus.html')
+    return render(request, 'about-us.html')
 
 def login_view(request):
     return render(request, 'login.html')
