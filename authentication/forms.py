@@ -25,7 +25,7 @@ class SignUpForm(UserCreationForm):
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "class": "form-control", 'id': 'username',
+                'placeholder': 'JohnDoe',"class": "form-control", 'id': 'username',
             }
         )
     )
@@ -48,8 +48,7 @@ class SignUpForm(UserCreationForm):
     )
     email = forms.CharField(
         widget=forms.TextInput(
-            attrs={
-                "class": "form-control", 'id': 'email'
+            attrs={'placeholder': 'name@student.example.com',"class": "form-control", 'id': 'email'
             }
         )
     )

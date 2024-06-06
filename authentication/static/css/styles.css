@@ -139,11 +139,10 @@ strong {
 
 #register-link,
 #login-link {
-    background-color: #F7C35F;
-    font-size: 1.5vh;
+    background-color: #ffffff;
+    font-size: 2.0vh;
     color: #023831;
     font-weight: 700;
-
 }
 
 #right {
@@ -166,5 +165,8 @@ strong {
 
 }
 .labele{
+    font-weight: 700;
+}
+.reg-password, .reg-email, .reg-username{
     font-weight: 700;
 }
