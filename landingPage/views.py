@@ -17,13 +17,13 @@ def cause_view(request):
     return render(request, 'cause.html')
 
 def ourcrew_view(request):
-    return render(request, 'ourcrew.html')
+    return render(request, 'our-crew.html')
 
 def donate_view(request):
     return render(request, 'donate.html')
 
 def aboutus_view(request):
-    return render(request, 'aboutus.html')
+    return render(request, 'about-us.html')
 
 def login_view(request):
     return render(request, 'login.html')
