@@ -12,42 +12,47 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'public/home.html')
 
+# def public_register(request):
+#     msg = None
+#     if request.method == 'POST':
+#         form = SignUpForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             msg = 'Registration successful'
+#             return redirect('login')
+#         else:
+#             msg = 'form is not valid'
+#     else:
+#         form = SignUpForm()
+#     return render(request,'auth/register.html', {'form': form, 'msg': msg})
 def public_register(request):
-    msg = None
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            msg = 'user created'
+            form.save()
+            messages.success(request, 'Registration successful. Proceed to log in.')
             return redirect('login')
         else:
-            msg = 'form is not valid'
+            messages.error(request, 'Form is not valid. Please correct the errors below.')
     else:
         form = SignUpForm()
-    return render(request,'auth/register.html', {'form': form, 'msg': msg})
+    return render(request, 'auth/register.html', {'form': form})
 
 def user_login(request):
     form = LoginForm(request.POST or None)
-    msg = None
     if request.method == 'POST':
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
-            if user is not None and user.is_student:
+            if user is not None:
                 login(request, user)
                 return redirect('home')
-            elif user is not None and user.is_owner:
-                login(request, user)
-                return redirect('home')
-            elif user is not None and user.is_admin:
-                login(request, user)
-                return redirect('admin')
             else:
-                msg= 'invalid credentials'
+                messages.error(request, 'Invalid username or password')
         else:
-            messages.info = 'error validating form'
-    return render(request, 'auth/login.html', {'form': form, 'msg': msg})
+            messages.error(request, 'Error validating form')
+    return render(request, 'auth/login.html', {'form': form})
 
 #admin
 def admin(request):

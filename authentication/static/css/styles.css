@@ -8,27 +8,32 @@
 
 * {
     font-family: 'Inter', sans-serif;
-    
+
     box-sizing: border-box;
 }
-h3{
+
+h3 {
     font-family: "Lulo Clean W01 One Bold";
 }
+
 #login-page {
     background-image: url("/static/images/tiny.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
+
 strong {
     color: #023831;
     font-weight: 900;
     font-size: 3vh;
 }
+
 #register-btn {
     font-weight: 900;
     font-size: 3vh;
 }
+
 #login-slogan {
     /* color: #133831; */
     color: #1F4E3D;
@@ -48,6 +53,7 @@ strong {
 #logo-login {
     height: 100px;
 }
+
 #logo {
     height: 35px;
     width: 35px;
@@ -63,6 +69,7 @@ strong {
     height: 80vh;
     object-fit: cover;
 }
+
 #button-card {
     height: 15vh;
     padding: 3%;
@@ -80,10 +87,13 @@ strong {
 #login-buuton {
     background-color: rgb(2, 56, 49);
     font-weight: bold;
-    color: #ffc703;
-    font-size: 2vh;
+    color: #ffffff;
+    font-size: 2.2vh;
     padding: 2%;
+
+    
 }
+
 .not-member {
     font-size: 1.8vh;
     color: #133831;
@@ -94,7 +104,7 @@ strong {
     color: #023831;
     font-size: 1.5vh;
     font-weight: 700;
-    padding: 1%;
+    padding: 2%;
     margin-right: 2%;
 }
 
@@ -103,7 +113,7 @@ strong {
     color: #fff;
     font-size: 1.5vh;
     font-weight: 700;
-    padding: 1%;
+    padding: 2%;
     margin-right: 2%;
 
 }
@@ -112,43 +122,49 @@ strong {
     color: #023831;
     font-size: 1.5vh;
     font-weight: 700;
-    padding: 1%;
+    padding: 2%;
     margin-right: 2%;
+    border: 0.5px solid #023831;
 }
 
 #login-btns {
     margin-bottom: 3%;
 }
+
 #par-register {
     font-size: 3vh;
     color: #023831;
     font-weight: 700;
 }
+
 #register-link,
-    #login-link {
-        background-color: #F7C35F;
-        font-size: 1.5vh;
-        color: #023831;
-        font-weight: 700;
+#login-link {
+    background-color: #F7C35F;
+    font-size: 1.5vh;
+    color: #023831;
+    font-weight: 700;
 
-    }
+}
 
-    #right {
-        background-color: #F7C35F;
-        height: 100vh;
-        width: 100%;
-    }
+#right {
+    background-color: #F7C35F;
+    height: 100vh;
+    width: 100%;
+}
 
-    #left {
-        background-color: #023831;
-        height: 100vh;
-        width: 100%;
-    }
+#left {
+    background-color: #023831;
+    height: 100vh;
+    width: 100%;
+}
 
-    #register-page {
-        background-image: url("/static/images/tiny.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 94.5vh;
+#register-page {
+    background-image: url("/static/images/tiny.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94.5vh;
 
-    }
+}
+.labele{
+    font-weight: 700;
+}
