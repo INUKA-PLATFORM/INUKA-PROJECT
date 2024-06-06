@@ -5,13 +5,14 @@
     text-dark: #242c38;
     text-light: #f2e3e3;
     extra-light: #f2f2f2;
-    max-width: 1200px;
+    max-width: 100%;
 }
 /*page formatting*/
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 /*navigation menu Bar*/
 nav{
@@ -30,9 +31,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 }
 nav .logo a{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(primary-color);
     transition: 0.3s;
@@ -58,12 +60,18 @@ ul li a{
     transition: 0.3s;
 }
 
+
 ul li a:hover{
     border-top-color: var(secondary-color);
     border-bottom-color: var(secondary-color);
     color: var(text-dark);
 }
-
+h3{
+    text-align: center;
+}
+.Mission-p{
+    text-align: justify;
+}
 .section{
     margin-top: 6%;
     background-color: var(extra-light);
@@ -74,9 +82,16 @@ ul li a:hover{
     max-width: var(max-width);
     margin: auto;
     padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+    display: flex;
+}
+.content{
+    margin: 10px 5px 10px 5px;
+    max-width: 60%;
+}
+.home-image{
+    margin: 10% 5% 10% 5%;
+
 }
 
 .title {
@@ -101,7 +116,7 @@ ul li a:hover{
 .action_btn{
     display: flex;
     gap: 1rem;
-    margin: auto;
+    margin: 10%;
 }
 
 .action_btn button{
