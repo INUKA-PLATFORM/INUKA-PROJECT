@@ -128,6 +128,7 @@ section#hero {
 #hero h1{
     font-size: 3rem;
     margin-bottom: 1rem;
+    margin-top: 6rem;
 }
 /*RESPONSIVE DESIGN OF THE PAGE*/
 @media (max-width: 992px) {
