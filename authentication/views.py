@@ -12,25 +12,16 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'public/home.html')
 
-# def public_register(request):
-#     msg = None
-#     if request.method == 'POST':
-#         form = SignUpForm(request.POST)
-#         if form.is_valid():
-#             user = form.save()
-#             msg = 'Registration successful'
-#             return redirect('login')
-#         else:
-#             msg = 'form is not valid'
-#     else:
-#         form = SignUpForm()
-#     return render(request,'auth/register.html', {'form': form, 'msg': msg})
+
 def public_register(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Registration successful. Proceed to log in.')
+            user=form.save(commit=False)
+            user.is_active = False 
+            user.save()
+            # form.save()
+            messages.success(request, 'Registration successful. Please wait for admin approval to login.')
             return redirect('login')
         else:
             messages.error(request, 'Form is not valid. Please correct the errors below.')
