@@ -38,6 +38,10 @@
     <h2>Donate to KickOutHunger</h2>
     <p>Thank you for considering a donation to KickOutHunger. Your generosity will help us continue our mission to provide nutritious meals to university students in need. Every donation makes a difference, no matter how big or small. Together, we can kick out student hunger and create a brighter future for all.</p>
    <!---Donors Data collection form-->
+   <div id="donation-container">
+    < <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css"><script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams?default_interval=o" data-style="background: rgb(2, 126, 53); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
+               
+  </div>
    <div class="container mt-5">
     <form action="" method="POST">
         {% csrf_token %}
@@ -109,6 +113,8 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Donate</button>
+    </form>
+
 
 </div>
     
@@ -124,42 +130,10 @@
         <a href="https://twitter.com/" class="fa fa-twitter"></a>
     </footer>
 
+    <script src="https://donorbox.org/widget.js" paypalExpress="true"></script><iframe src="https://donorbox.org/embed/kick-out-hunger-feeding-dreams?language=en" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important" allow="payment"></iframe>     
+
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .jungle-green-header {
-    background-color: #027e35; 
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .back-button {
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  .back-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  .donation-title {
-    margin: 0 auto;
-    color: rgb(237, 247, 234);
-  }
-  #donation-container {
-    text-align: center;
-    margin-top: 50px;
-  }
-</style>
 </html>
