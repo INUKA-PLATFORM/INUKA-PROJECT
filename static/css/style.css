@@ -254,6 +254,8 @@ h3{
 .footer{
     text-align: center;
     margin: 10px;
+    display: fixed;
+    bottom: 0;
 }
 hr{
     width: 99%;
