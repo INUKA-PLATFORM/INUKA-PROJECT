@@ -7,6 +7,9 @@
     extra-light: #f2f2f2;
     max-width: 100%;
 }
+.section{
+    background-image: url('static/images/logo.jpeg');
+}
 /*page formatting*/
 *{
     padding: 0px;
@@ -14,41 +17,51 @@
     box-sizing: border-box;
     line-height: 1.5;
 }
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+.header-text{
+    margin: 10px 0px 10px 20px;
+    font-size: 2rem;
+}
+.log-img{
+    width: 6rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin:auto;
+    display: block;
+}
 /*navigation menu Bar*/
 nav{
     width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
     background-color: mintcream;
     z-index: 99;
-    
 }
 .nav_content{
     max-width: var(max-width);
     margin: auto;
     padding: 1.5rem 1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-   
+    align-items: center;
 }
-nav .logo a{
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(primary-color);
-    transition: 0.3s;
+.home-img1{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
 }
 
-nav .logo a:hover{
-    color: var(primary-color-dark);
-}
 ul{
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     list-style: none;
     transition: left 0.3s;
+    font-size: large;
+    text-align: right;
+    margin: 0 0 0 auto;
 }
 
 ul li a{
@@ -63,14 +76,16 @@ ul li a{
 
 ul li a:hover{
     border-top-color: var(secondary-color);
-    border-bottom-color: var(secondary-color);
+    background-color: #4C8B52;
     color: var(text-dark);
 }
 h3{
     text-align: center;
+    font-size: 1.5rem;
 }
-.Mission-p{
-    text-align: justify;
+.vision-p, .Mission-p{
+    text-align: center;
+    font-size: 1.2rem;
 }
 .section{
     margin-top: 6%;
@@ -87,28 +102,27 @@ h3{
 }
 .content{
     margin: 10px 5px 10px 5px;
-    max-width: 60%;
+    max-width: 50%;
 }
 .home-image{
-    margin: 10% 5% 10% 5%;
+    margin: 5% 0% 5% 0%;
 
 }
+.inuka_brief{
+    text-align: center;
+    font-size: 1.2rem;
+}
 
-.title {
-    
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 3rem;
+.sub-title {
+    font-size: 2rem;
+    font-weight: 40px;
     color: var(text-dark);
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
-.title span{
-    font-weight: 600;
-}
 
 .description{
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     color: var(text-light);
     margin-bottom: 2rem;
 }
@@ -240,6 +254,8 @@ h3{
 .footer{
     text-align: center;
     margin: 10px;
+    display: fixed;
+    bottom: 0;
 }
 hr{
     width: 99%;
@@ -279,13 +295,14 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #575757;
+    background-color: #4C8B52;
+    border-radius: 50%;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #4C8B52;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;

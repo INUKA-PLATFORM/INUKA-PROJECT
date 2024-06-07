@@ -1,53 +1,82 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="author" content="slickplan.com">
-<title>Our Crew | PROJECT-INUKA</title>
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-<body>
-<div id="wrapper">
-<nav>
-<ul>
-<li><a href="index.html">Home page/ Landing Page</a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="cause.html">Cause</a></li>
-<li><a href="concept.html">Concept</a></li>
-<li>
-<a href="our-crew.html">Our Crew</a>
-<ul>
-<li><a href="our-crew/david.html">David</a></li>
-<li><a href="our-crew/martin.html">Martin</a></li>
-<li><a href="our-crew/barasa.html">Barasa</a></li>
-<li><a href="our-crew/vivian.html">Vivian</a></li>
-<li><a href="our-crew/yunis.html">Yunis</a></li>
-</ul>
-</li>
-<li>
-<a href="donate.html">Donate</a>
-<ul>
-<li><a href="donate/monthly-giving.html">Monthly giving</a></li>
-<li><a href="donate/one-time-gift.html">One Time Gift</a></li>
-<li>
-<a href="donate/corporate-partners.html">Corporate partners</a>
-<ul>
-<li><a href="donate/corporate-partners/partner-with-us.html">Partner with Us</a></li>
-</ul>
-</li>
-<li>
-<a href="donate/marchendise.html">Marchendise</a>
-<ul>
-<li><a href="donate/marchendise/gifts-in-kund.html">Gifts in Kund</a></li>
-<li><a href="donate/marchendise/students-work.html">Students work</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<div id="main">
-</div>
-</div>
+<body class="bg-success">
+    <nav>
+        <div class="nav_content">
+            <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="{% url 'aboutus' %}">About</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'concept' %}">Concept</a></li>
+                <li><a href="{% url 'cause' %}">Cause</a></li>
+                <li><a href="{% url 'donate' %}">Donate</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Home page -->
+   <main>
+   <!--Our crew page-->
+    <section class="section bg-success">
+        <div class="section_container">
+            <div class="content">
+                <h2 class="sub-title">Our Crew</h2>
+                <p class="inuka_brief">Meet the dedicated team behind KickOutHunger</p>
+                <div class="crew">
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew1.jpg' %}" alt="crew1">
+                        <h3>David Nanjila</h3>
+                        <p>Project Manager</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew2.jpg' %}" alt="crew2">
+                        <h3>Grace Mwende</h3>
+                        <p>Program Coordinator</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew3.jpg' %}" alt="crew3">
+                        <h3>Martin Musembi</h3>
+                        <p>Finance Manager</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew4.jpg' %}" alt="crew4">
+                        <h3>Vivia</h3>
+                        <p>Communications Officer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-image">
+                <img class="home-img1" src="{% static 'images/food.jpg' %}" alt="home-image">
+            </div>
+        </div>
+    </section>
+ 
+   </main>
+
+    <hr />
+    <footer class="social">
+        <h4>Visit Our Social Media</h4>
+        
+        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
+        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     
 </body>
 </html>
