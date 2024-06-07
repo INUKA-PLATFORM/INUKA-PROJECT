@@ -7,9 +7,6 @@
     extra-light: #f2f2f2;
     max-width: 100%;
 }
-.section{
-    background-image: url('static/images/logo.jpeg');
-}
 /*page formatting*/
 *{
     padding: 0px;
@@ -251,14 +248,14 @@ h3{
     }
 }
 /*footer styling*/
-.footer{
+footer{
     text-align: center;
     margin: 10px;
-    display: fixed;
     bottom: 0;
 }
 hr{
-    width: 99%;
+    width: 98%;
+    margin: 10px 10px 10px 10px;
 }
 a{
     text-decoration: none;
