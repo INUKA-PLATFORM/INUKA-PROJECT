@@ -21,7 +21,7 @@
     
   <nav>
         <div class="nav_content">
-            <div class="logo"><a href="#">SaveAComrade</a>
+            <div class="logo"><a href="#">Kick Out Hunger</a>
             </div>
         
             <ul>
@@ -43,14 +43,15 @@
         <div class="section_container">
             <div class="content">
                 <h1 class="title">
-                    Welcome to <span>Project Inuka</span>
+                    Welcome to <span>Kick Out Hunger</span>
                 </h1>
                 <p class="inuka_brief">
-                    Inuka is a feeding programme for campus students
+                    Kick Out Hunger is a non-profit organisation that aims to eradicate college hunger.
                 </p>
                 <div class="action_btn">
                     <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
-                    <button class="donate">Feed a Student</button>
+
+                    <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css"><script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams?default_interval=o" data-style="background: rgb(2, 126, 53); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
                     <p>hello {{nam}}</p>
                    
                 </div>
@@ -70,5 +71,7 @@
           <a href="https://twitter.com/" class="fa fa-twitter"></a>
         </footer>
       </div>
+
+      <script src="https://donorbox.org/widget.js" paypalExpress="true"></script><iframe src="https://donorbox.org/embed/kick-out-hunger-feeding-dreams?language=en" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important" allow="payment"></iframe>
 </body>
 </html>
