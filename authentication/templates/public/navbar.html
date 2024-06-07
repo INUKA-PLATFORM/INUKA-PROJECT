@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="/">
-        <img src="{% static 'images/help.png'%}" alt="INUA" loading="lazy" id="logo" />
+        <img src="{% static 'images/help.jpeg'%}" alt="INUA" loading="lazy" id="logo" />
       </a>
       <!-- Left links -->
       {% if user.is_authenticated %}
@@ -49,7 +49,7 @@
           <img src="{{request.user.profile.profile_pic.url}}" class="rounded-circle"
             alt="User" loading="lazy"  id="logo" />
           {%else %}
-          <img src="{% static 'images/help.png' %}" class="rounded-circle shadow" height="25"
+          <img src="{% static 'images/help.jpeg' %}" class="rounded-circle shadow" height="25"
             alt="Black and White Portrait of a Man" loading="lazy" />
           {% endif %}
         </a>

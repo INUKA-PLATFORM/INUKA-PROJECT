@@ -141,7 +141,8 @@ strong {
 #login-link {
     background-color: #ffffff;
     font-size: 2.0vh;
-    color: #023831;
+    /* color: #023831; */
+    color:#000000;
     font-weight: 700;
 }
 
