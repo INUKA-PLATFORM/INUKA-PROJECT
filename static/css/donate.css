@@ -1,0 +1,12 @@
+main{
+    margin: 10% 20px 10px 20px;
+   
+}
+
+input[type="radio"]{
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 10px;    
+    cursor: pointer;
+    gap: 2rem;
+}
