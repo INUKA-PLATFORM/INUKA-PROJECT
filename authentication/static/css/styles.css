@@ -163,12 +163,14 @@ strong {
     background-image: url("/static/images/tiny.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 94.5vh;
+    /* height: 94.5vh; */
+    margin-bottom: 4%;
 
 }
 .labele{
     font-weight: 700;
 }
-.reg-password, .reg-email, .reg-username{
+.reg-password, .reg-email, .reg-username, .reg-lastname,
+ .reg-firstname, .reg-surname, .reg-id, .reg-phonenumber{
     font-weight: 700;
 }

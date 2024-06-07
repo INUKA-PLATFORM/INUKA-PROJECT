@@ -4,6 +4,9 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     is_student= models.BooleanField('Is student', default=True)
+    student_id = models.CharField(max_length=20, unique=True)
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    surname = models.CharField(max_length=30, blank=True, null=True)
     
 class Donation(models.Model):
     email = models.EmailField()
