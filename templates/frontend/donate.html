@@ -9,8 +9,10 @@
     <!-- External CSS file link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/donate.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="body bg-success">
     <nav>
         <div class="nav_content">
             <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
@@ -32,18 +34,98 @@
     </nav>
     <!-- Home page -->
    <main>
-    <img class="donate-img" src="{% static 'images/image.png' %}">
+   
     <h2>Donate to KickOutHunger</h2>
+    <p>Thank you for considering a donation to KickOutHunger. Your generosity will help us continue our mission to provide nutritious meals to university students in need. Every donation makes a difference, no matter how big or small. Together, we can kick out student hunger and create a brighter future for all.</p>
+   <!---Donors Data collection form-->
+   <div class="container mt-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Donors Information</h3>
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" name="country" id="country" placeholder="Enter your country" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="Enter your city" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Donation Amount</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="donation-amount" id="amount25" value="25">
+                <label class="form-check-label" for="amount25">$25</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="donation-amount" id="amount50" value="50">
+                <label class="form-check-label" for="amount50">$50</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="donation-amount" id="amount100" value="100">
+                <label class="form-check-label" for="amount100">$100</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="donation-amount" id="amount250" value="250">
+                <label class="form-check-label" for="amount250">$250</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="donation-amount" id="amountOther" value="other">
+                <label class="form-check-label" for="amountOther">Other</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="amount">Amount (if Other selected)</label>
+            <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount in USD">
+        </div>
+        
+        <div class="form-group">
+            <label>Payment Method</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment-method" id="paymentCreditCard" value="credit-card">
+                <label class="form-check-label" for="paymentCreditCard">Credit Card</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment-method" id="paymentPayPal" value="paypal">
+                <label class="form-check-label" for="paymentPayPal">PayPal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="payment-method" id="paymentBankTransfer" value="bank-transfer">
+                <label class="form-check-label" for="paymentBankTransfer">Bank Transfer</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Donate</button>
+    </form>
+</div>
+    
    </main>
-    <div class="footer">
+ 
+   
+    <footer class="social">
         <hr />
-        <footer class="social">
-            <h4>Visit Our Social Media</h4>
-            
-            <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
-            <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
-            <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        </footer>
-    </div>
+        <h4>Visit Our Social Media</h4>
+        
+        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
+        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    </footer>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
