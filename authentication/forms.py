@@ -94,11 +94,7 @@ class SignUpForm(UserCreationForm):
         ),
         required=True
     )
-    # first_name = forms.CharField(required=True)
-    # last_name = forms.CharField(required=True)
-    # student_id = forms.CharField(required=True)
-    # phone_number = forms.CharField(required=True)
-    # surname = forms.CharField(required=False)
+    
 
     class Meta:
         model = User
