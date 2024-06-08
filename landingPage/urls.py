@@ -12,5 +12,7 @@ urlpatterns = [
     path('donate', views.donate_view, name='donate'),
     path('aboutus', views.aboutus_view, name='aboutus'),
     path('login', views.login_view, name='login'),
-    path('admin', views.admin_view, name='admin')
+    path('admin', views.admin_view, name='admin'),
+    path('contact', views.contact_view, name='contact')
+
 ]

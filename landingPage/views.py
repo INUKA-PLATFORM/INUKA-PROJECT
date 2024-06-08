@@ -30,3 +30,7 @@ def login_view(request):
 
 def admin_view(request):
     return render(request, 'admin.html')
+
+def contact_view(request):
+    return render(request, 'contact.html')
+
