@@ -1,0 +1,12 @@
+.aboutUsdata{
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #8ad1ae;
+    box-shadow: 5px 5px 5px 5px #888888;
+    font-size: 1.2rem;
+}
