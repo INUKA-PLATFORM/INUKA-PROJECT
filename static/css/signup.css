@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    background-color: #4C8B52;
+}
+form{
+    
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: justify;
+    width: 50%;
+}
+label{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.uni{
+    margin-right: 40px;
+}
+input{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}

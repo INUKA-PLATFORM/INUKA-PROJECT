@@ -59,6 +59,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 # CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app"]
+# ALLOWED_HOSTS = [".replit.dev", ".replit.app", 'localhost','127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app"]
+
 
 # Application definition
 
@@ -71,6 +74,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authentication',
     'django_bootstrap5'
+    'landingPage',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +94,7 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/frontend')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,13 +156,18 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # configuring the location for media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS=[
+    BASE_DIR / "static",
+]
 
 # change Auth model to use our new model User
 AUTH_USER_MODEL = 'authentication.User'
