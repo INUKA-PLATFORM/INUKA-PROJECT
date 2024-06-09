@@ -51,5 +51,5 @@ def admin(request):
 
 def user_logout(request):
     logout(request)
-    return render(request, 'public/index.html')
+    return render(request, 'home.html')
 
