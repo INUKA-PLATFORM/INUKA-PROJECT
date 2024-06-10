@@ -1,15 +1,18 @@
-{% load static%}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KickOutHunger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- External CSS file link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{% static 'css/our-crew.css' %}?{% now 'U' %}" type="text/css">
+    <!--Font awesome css for font icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body class="bg-success">
+<body>
     <nav>
         <div class="nav_content">
             <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
@@ -29,65 +32,105 @@
             </ul>
         </div>
     </nav>
-    <!-- Home page -->
-   <main>
-   <!--Our crew page-->
-    <section class="section bg-success">
-        <div class="section_container">
+    <main>
+        <div class="aboutUsdata">
             <div class="content">
-                <h2 class="sub-title">Our Crew</h2>
-                <p class="inuka_brief">Meet the dedicated team behind KickOutHunger</p>
-                <div class="crew">
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew1.jpg' %}" alt="crew1">
-                        <h3>sOLOMON</h3>
-                        <p>Project Manager</p>
+                <h1> Meet the Team</h1>
+                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde similique aut eum commodi natus laborum, atque aperiam rem quia! Ut!</P>
+            </div>
+            <div class="dreamteam">
+                <div class="team-members">
+
+                    <div class="member_card">
+                        <img src="{% static 'images\Martin F.E.D.jpg'%}" alt="">
+                        <h2>Martin Musembi </h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew2.jpg' %}" alt="crew2">
-                        <h3>Balala</h3>
-                        <p>Program Coordinator</p>
+
+                    <div class="member_card">
+                        <img src="" alt="">
+                        <h2>David Nanjila</h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew3.jpg' %}" alt="crew3">
-                        <h3>Martin</h3>
-                        <p>Finance Manager</p>
+
+                    <div class="member_card">
+                        <img src="" alt="">
+                        <h2>Eunice </h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew4.jpg' %}" alt="crew4">
-                        <h3>Vivia</h3>
-                        <p>Communications Officer</p>
+
+                    <div class="member_card">
+                        <img src="{% static 'images\Reuben.jpg'%}" alt="">
+                        <h2>Reuben </h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew4.jpg' %}" alt="crew5">
-                        <h3>Reuben</h3>
-                        <p>Communications Officer</p>
+
+                    <div class="member_card">
+                        <img src="" alt="">
+                        <h2>Martin Musembi </h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    <div class="crew_member">
-                        <img src="{% static 'images/crew4.jpg' %}" alt="crew5">
-                        <h3>David</h3>
-                        <p>Communications Officer</p>
+
+                    <div class="member_card">
+                        <img src="" alt="">
+                        <h2>Martin Musembi </h2>
+                        <h5>FrontEnd Developer</h5>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
-                    content and images to be added
+
                 </div>
             </div>
-            <div class="home-image">
-                <img class="home-img1" src="{% static 'images/food.jpg' %}" alt="home-image">
-            </div>
         </div>
-    </section>
- 
-   </main>
+    </main>
+        <footer class="social">
+            <hr>
+            <h2>Visit Our Social Media</h2>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            </footer>
 
-    <hr />
-    <footer class="social">
-        <h4>Visit Our Social Media</h4>
-        
-        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
-        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
-        <a href="https://twitter.com/" class="fa fa-twitter"></a>
-    </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-     
 </body>
 </html>

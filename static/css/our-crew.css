@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: poppins, sans-serif;
+}
+
+.dreamteam {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100hv;
+    position: relative;
+    /*background-color: aquamarine;*/
+    color: #f2f2f2;
+    padding: 3.5rem 0;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.team-members .member-card {
+    padding: 1rem 2.5rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.6);
+}
+
+.member_card img {
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.member_card h2 {
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0.6rem;
+}
+.member_card h5 {
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    background-color: #fdfdfd;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.member-card:nth-child(1)
+{
+    background-color: rgb(152, 191, 194);
+}
+
+.member-card:nth-child(1)
+{
+    background-color: #0be3ff;
+    top: 20%;
+}
+
+.member-card .social {
+    margin: 15px;
+    text-align: center;
+}
+
+.social a i {
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.social a i:hover {
+    transform: rotate(360deg);
+}
+
+.member-card:hover{
+    z-index: 999;
+    transform: scale(1.2);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.content{
+    max-width: 700px;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 1.rem;
+}
