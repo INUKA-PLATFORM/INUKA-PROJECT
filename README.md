@@ -1,4 +1,4 @@
-# WipeOutHunger
+# KickOutHunger
 - Welcome to the official repository for WipeOutHunger
 
 # how to work on this project
