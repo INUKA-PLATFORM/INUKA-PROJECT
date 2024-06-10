@@ -1,0 +1,121 @@
+{% load static %}
+<!-- footer 14 -->
+<div class="w3l-footer-main">
+    <div class="w3l-sub-footer-content">
+        <section class="_form-3">
+            <div class="form-main">
+                <div class="container">
+                    <div class="middle-section grid-column top-bottom card bg-light bg-body rounded">
+                        <div class="image grid-three-column">
+                            <img src="{% static 'images/subscribe.png'%}" alt="" class="img-fluid radius-image-full">
+                        </div>
+                        <div class="text-grid grid-three-column">
+                            <h2 class="">Subscribe our Newsletter to receive latest updates from us</h2>
+                            <p class="text-dark fw-bold">We won’t give you spam mails.</p>
+                        </div>
+                        <div class="form-text grid-three-column ">
+                            <form action="/" method="GET">
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter Your Email" required="">
+                                <button type="submit" class="btn btn-style btn-success"
+                                    id="subscribe-btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footers-14 -->
+        <footer class="footer-14">
+            <div id="footers14-block">
+                <div class="container">
+                    <div class="footers20-content">
+                        <div class="d-grid grid-col-4 grids-content">
+                            <div class="column">
+                                <h4>Our Address</h4>
+                                <p>Huduma Centre - GPO Nairobi Kenya.</p>
+                            </div>
+                            <div class="column">
+                                <h4>Call Us</h4>
+                                <p>Mon - Fri 08:30 -18:00</p>
+                                <p><a href="tel:+254-790-987-675">+254-790-987-675</a></p>
+                            </div>
+                            <div class="column">
+                                <h4>Mail Us</h4>
+                                <p><a href="mailto:kickouthungerke@gmail.com">kickouthungerke@gmail.com</a></p>
+                                <!-- <p><a href="mailto:no.reply@example.com">no.reply@example.com</a></p> -->
+                            </div>
+                            <div class="column">
+                                <h4>Follow Us On</h4>
+                                <ul>
+                                    <li>
+                                        <a class="btn rounded-circle" href="#!" role="button" id="facebook">
+                                            <i class="fab fa-facebook fa-2x py-2 "></i>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a class="btn text-white rounded-circle" id="facebook" href="#!" role="button">
+                                            <i class=" text-center fab fa-twitter fa-2x p-2"></i>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn text-white rounded-circle" id="facebook" href="#!" role="button">
+                                            <i class="fa-brands fa-linkedin fa-2x p-2"></i>
+
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a class="btn text-white rounded-circle" id="facebook" href="#!" role="button">
+                                            <i class="fa-brands fa-instagram fa-2x p-2"></i>
+
+
+                                        </a>
+
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footers14-bottom">
+                        <div class="copyright text-center">
+                            <p id="copyright"> © 2024 Kick Out Hunger. All rights reserved. Design by Kick Out
+                                Hunger</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                &uarr;
+            </button>
+            <script>
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("movetop").style.display = "block";
+                    } else {
+                        document.getElementById("movetop").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+
+
+        </footer>
+
+    </div>
+</div>
