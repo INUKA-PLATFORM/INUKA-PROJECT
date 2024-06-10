@@ -34,3 +34,6 @@ button{
     cursor: pointer;
     outline: none;
 }
+.mt{
+    margin-top: 10%;
+}

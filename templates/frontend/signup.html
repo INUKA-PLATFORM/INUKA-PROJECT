@@ -6,9 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
     <link rel="stylesheet" href="{% static 'css/signup.css' %}?{% now 'U' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' % }?{% now 'U' %}">
 </head>
 <body>
-    <h1>SignUp as a student</h1>
+    <nav>
+        <div class="nav_content">
+            <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
+            <ul>
+                <li class="dropdown">
+                    <a href="{% url 'aboutus' %}">About</a>
+                    <ul class="dropdown-content">
+                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'concept' %}">Concept</a></li>
+                <li><a href="{% url 'cause' %}">Cause</a></li>
+                <li><a href="{% url 'donate' %}">Donate</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="mt">SignUp as a student</h1>
+    <p>Fill in the form below to create an account</p>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
     <form action="signup.php" method="post">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required ><br><label for="University">University</label><input type="text" name="University" required><br>
@@ -19,5 +42,12 @@
         <button type="submit">Sign Up</button> <a href="{% url 'login' %}"><button>Login</button></a>
         <p><a href="{% url 'home' %}">Home</a></p>
     </form>
+    <footer class="social">
+        <hr>
+        <h2>Visit Our Social Media</h2>
+        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
+        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        </footer>
 </body>
 </html>

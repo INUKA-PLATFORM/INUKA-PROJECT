@@ -19,3 +19,6 @@ input[type="email"],input[type="password"]{
     border: 1px solid #ccc;
     outline: none;
 }
+.card{
+    margin-top: 16%;
+}
