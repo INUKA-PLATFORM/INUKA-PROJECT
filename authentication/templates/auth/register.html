@@ -1,0 +1,148 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid d-flex justify-content-center align-items-center" id="register-page">
+  <div class="col-md-6 mx-auto " id="register-card">
+    <div>
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert {{message.tags}} m-1 alert-success mb-3" role="alert" style="font-size: medium;">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="card mx-auto register-card">
+      <!-- <div class=" card "> -->
+      <p class="text-center">
+        <img src="{% static 'images/help.jpeg'%}" alt="logo" id="logo-login">
+      </p>
+      <h4 class="mb-4 text-center">
+        <strong>EMPOWERING STUDENTS FEEDING DREAMS</strong>
+      </h4>
+      <p class="text-center" id="par-register">REGISTER</p>
+
+      <form method="post" class="col-md-11 mx-auto">
+        {% csrf_token %}
+        <div class="row g-3">
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="first_name" class="reg-firstname">First Name</label>
+              {{ form.first_name }}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="last_name"class="reg-lastname">Last Name</label>
+              {{ form.last_name }}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="first_name" class="reg-surname">Surname</label>
+              {{ form.surname }}
+            </div>
+          </div>
+        </div>
+        
+        <div class="row g-3">
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="username" class="reg-username">Username</label>
+              {{ form.username }}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="student_id" class="reg-id">Student Reg No</label>
+              {{ form.student_id }}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="phonenumber" class="reg-phonenumber">Phone Number</label>
+              {{ form.phone_number }}
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="form-group first mb-3">
+          <label for="email" class="reg-email">Email</label>
+          {{ form.email}}
+        </div>
+        <div class="row g-3">
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="password" class="reg-password">Password</label>
+              {{ form.password1 }}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group last mb-3">
+              <label for="password"class="reg-password">Confirm Password</label>
+              {{ form.password2 }}
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div class="form-group last mb-3">
+          <label for="password" class="reg-password">Password</label>
+          {{ form.password1 }}
+        </div>
+        <div class="form-group last mb-3">
+          <label for="password"class="reg-password">Confirm Password</label>
+          {{ form.password2 }}
+        </div> -->
+        <!-- <div class="row mt-4">
+          <div class="col-md-6">
+            <label class="control control--checkbox mb-0"><span class="caption">Student</span>
+              {{ form.is_student }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+          <div class="col-md-6">
+            <label class="control control--checkbox mb-0"><span class="caption">donor</span>
+              {{ form.is_donor }}
+              <div class="control__indicator"></div>
+            </label>
+          </div>
+        </div> -->
+        <!-- <div class="alert alert-danger" role="alert"> -->
+          <span class="text-error ">{{ form.errors }}</span>
+        <!-- </div> -->
+        <div class="d-grid gap-2">
+          <input type="submit" value="Register" class="btn d-grid gap-2 mt-1"
+          id="login-buuton">
+        </div>
+        
+      </form>
+      <!-- Register buttons -->
+      <div class="text-center p-2" id="login-btns">
+        <p class="not-member">or sign up with:</p>
+        <!-- facebook login button -->
+        <a class="btn" href="#!" role="button" id="facebook">
+          <i class="fab fa-facebook me-2"></i>
+          Facebook
+        </a>
+        <!-- twitter login button -->
+        <a class="btn text-white" id="twitter" href="#!" role="button">
+          <i class="fab fa-twitter me-2"></i>
+          Twitter
+        </a>
+        <!-- google login button -->
+        <a class="btn" id="google" href="#!" role="button">
+          <i class="fab fa-google me-2"></i>
+          Google
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
