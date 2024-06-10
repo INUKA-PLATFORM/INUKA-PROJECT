@@ -15,10 +15,12 @@
             </li>
             <li><a href="{% url 'concept' %}">Concept</a></li>
             <li><a href="{% url 'cause' %}">Cause</a></li>
-            <li><a href="{% url 'donate' %}">Donate</a></li>
+            <a href="{% url 'donate' %}">
+                <button type="button" class="btn btn-success btn-lg" id="donate-button"><i class="fa-solid fa-heart"></i> Donate</button>
+            </a>
             {% if user.is_authenticated %}
             <li class="dropdown">
-                <a href="{% url 'aboutus' %}">About</a>
+                <a href="{% url 'aboutus' %}"></a>
             <ul class="dropdown-content">
                 <li><a href="#">
                     {% if request.user.profile.profile_pic %}
@@ -38,7 +40,11 @@
             
 
             {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
+            <a href="{% url 'login' %}">
+                <a href="{% url 'donate' %}">
+                    <button type="button" class="btn btn-success btn-lg" id="donate-button"> Login <i class="fa-solid fa-right-to-bracket"></i></button>
+                </a>
+            </a>
             {% endif %}
         </ul>
     </div>
