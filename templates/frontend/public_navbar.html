@@ -1,0 +1,45 @@
+{% load static %}
+<nav>
+    <div class="nav_content">
+        <div class="logo">
+            <a href="{% url 'home' %}"><img class="log-img" src="{% static 'images/logo.jpeg' %}" alt="Logo"></a>
+            <h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1>
+        </div>
+        <ul>
+            <li class="dropdown">
+                <a href="{% url 'aboutus' %}">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                    <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'concept' %}">Concept</a></li>
+            <li><a href="{% url 'cause' %}">Cause</a></li>
+            <li><a href="{% url 'donate' %}">Donate</a></li>
+            {% if user.is_authenticated %}
+            <li class="dropdown">
+                <a href="{% url 'aboutus' %}">About</a>
+            <ul class="dropdown-content">
+                <li><a href="#">
+                    {% if request.user.profile.profile_pic %}
+                    <img src="{{ request.user.profile.profile_pic.url }}" class="rounded-circle" alt="User"
+                        loading="lazy" id="logo" />
+                    {% else %}
+                    <img src="{% static 'images/logo.jpeg' %}" class="rounded-circle shadow" height="25"
+                        alt="Default Profile Pic" loading="lazy" />
+                    {% endif %}
+                </a></li>
+                <li>
+                    <a href="{% url 'logout' %}">Logout</a>
+                </li>
+                
+            </ul>
+            </li>
+            
+
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
