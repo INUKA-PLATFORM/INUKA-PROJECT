@@ -1,3 +1,9 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- {% load static%}
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -73,9 +79,69 @@
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
                     </ul>
+
+                </li>
+                <li><a href="{% url 'concept' %}">Concept</a></li>
+                <li><a href="{% url 'cause' %}">Cause</a></li>
+                <li><a href="{% url 'donate' %}">Donate</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'admin' %}">Admin</a></li>
+            </ul>
+        </div>
+    </nav> -->
+<!-- Home page -->
+<main>
+    <!--Our crew page-->
+    <section class="section bg-success">
+        <div class="section_container">
+            <div class="content">
+                <h2 class="sub-title">Our Crew</h2>
+                <p class="inuka_brief">Meet the dedicated team behind KickOutHunger</p>
+                <div class="crew">
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew1.jpg' %}" alt="crew1">
+                        <h3>sOLOMON</h3>
+                        <p>Project Manager</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew2.jpg' %}" alt="crew2">
+                        <h3>Balala</h3>
+                        <p>Program Coordinator</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew3.jpg' %}" alt="crew3">
+                        <h3>Martin</h3>
+                        <p>Finance Manager</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew4.jpg' %}" alt="crew4">
+                        <h3>Vivia</h3>
+                        <p>Communications Officer</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew4.jpg' %}" alt="crew5">
+                        <h3>Reuben</h3>
+                        <p>Communications Officer</p>
+                    </div>
+                    <div class="crew_member">
+                        <img src="{% static 'images/crew4.jpg' %}" alt="crew5">
+                        <h3>David</h3>
+                        <p>Communications Officer</p>
+                    </div>
+                    content and images to be added
+
                 </div>
             </div>
         </div>
     </section>
-</body>
-</html>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<!-- </body>
+</html> -->
+
+{% endblock %}

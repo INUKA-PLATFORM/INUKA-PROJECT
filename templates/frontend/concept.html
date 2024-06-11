@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" 
     />
-    <!--External css for concept page-->
+    
     <link rel="stylesheet" href="{% static 'css/concept.css' %}?{% now 'U' %}" type="text/css">
     <title>Concept | PROJECT-INUKA</title>
     
@@ -39,7 +42,7 @@
             <li><a href="contact">Contact</a></li>
             <li><a href="#" class="action_btn">Donate</a></li>
         </div>
-    </header>
+    </header> -->
 
     <main>
         <section id="hero">
@@ -127,5 +130,7 @@
                 : 'fa-solid fa-bars'
         }
     </script>
-</body>
-</html>
+<!-- </body>
+</html> -->
+
+{% endblock %}
