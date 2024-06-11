@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' % }?{% now 'U' %}">
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <div class="nav_content">
             <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
             <ul>
@@ -28,7 +30,7 @@
                 <li><a href="{% url 'admin' %}">Admin</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
     <h1 class="mt">SignUp as a student</h1>
     <p>Fill in the form below to create an account</p>
     <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
@@ -42,12 +44,7 @@
         <button type="submit">Sign Up</button> <a href="{% url 'login' %}"><button>Login</button></a>
         <p><a href="{% url 'home' %}">Home</a></p>
     </form>
-    <footer class="social">
-        <hr>
-        <h2>Visit Our Social Media</h2>
-        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
-        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
-        <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        </footer>
+
 </body>
 </html>
+{% endblock %}
