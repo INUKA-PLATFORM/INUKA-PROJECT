@@ -1,53 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="author" content="slickplan.com">
-<title>Cause | PROJECT-INUKA</title>
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-<div id="wrapper">
-<nav>
-<ul>
-<li><a href="index.html">Home page/ Landing Page</a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="cause.html">Cause</a></li>
-<li><a href="concept.html">Concept</a></li>
-<li>
-<a href="our-crew.html">Our Crew</a>
-<ul>
-<li><a href="our-crew/david.html">David</a></li>
-<li><a href="our-crew/martin.html">Martin</a></li>
-<li><a href="our-crew/barasa.html">Barasa</a></li>
-<li><a href="our-crew/vivian.html">Vivian</a></li>
-<li><a href="our-crew/yunis.html">Yunis</a></li>
-</ul>
-</li>
-<li>
-<a href="donate.html">Donate</a>
-<ul>
-<li><a href="donate/monthly-giving.html">Monthly giving</a></li>
-<li><a href="donate/one-time-gift.html">One Time Gift</a></li>
-<li>
-<a href="donate/corporate-partners.html">Corporate partners</a>
-<ul>
-<li><a href="donate/corporate-partners/partner-with-us.html">Partner with Us</a></li>
-</ul>
-</li>
-<li>
-<a href="donate/marchendise.html">Marchendise</a>
-<ul>
-<li><a href="donate/marchendise/gifts-in-kund.html">Gifts in Kund</a></li>
-<li><a href="donate/marchendise/students-work.html">Students work</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<div id="main">
-</div>
-</div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Cause{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/cause.css' %}?{% now 'U' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Cause</h1>
+                <p class="text-center">KickOutHunger is a transformative university feeding program designed to support students from less fortunate backgrounds who struggle to afford daily meals at the campus cafeteria. Recognizing that proper nutrition is vital for academic success and overall well-being, Project Inuka provides a sustainable solution to ensure no student has to go hungry. By leveraging the power of community and the generosity of well-wishers, corporate partners, and alumni, Project Inuka aims to create a supportive environment where every student can thrive.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
