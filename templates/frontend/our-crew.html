@@ -4,133 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KickOutHunger</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- External CSS file link -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/our-crew.css' %}?{% now 'U' %}" type="text/css">
     <!--Font awesome css for font icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>KickOutHunger</title>
 </head>
 <body>
-    <nav>
-        <div class="nav_content">
-            <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
-            <ul>
-                <li class="dropdown">
-                    <a href="{% url 'aboutus' %}">About</a>
-                    <ul class="dropdown-content">
-                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
-                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
+    
+    <section>
+        <div class="container">
+            <h1 class="heading">Meet The Team</h1>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="{% static 'images/Martin F.E.D.jpg'%}" alt="profile image" class="profile.img">
+                    <h1>Martin Musembi</h1>
+                    <p class="title">Front End Developer</p>
+                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
                     </ul>
-                </li>
-                <li><a href="{% url 'concept' %}">Concept</a></li>
-                <li><a href="{% url 'cause' %}">Cause</a></li>
-                <li><a href="{% url 'donate' %}">Donate</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'admin' %}">Admin</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <div class="aboutUsdata">
-            <div class="content">
-                <h1> Meet the Team</h1>
-                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde similique aut eum commodi natus laborum, atque aperiam rem quia! Ut!</P>
-            </div>
-            <div class="dreamteam">
-                <div class="team-members">
+                </div>
 
-                    <div class="member_card">
-                        <img src="{% static 'images\Martin F.E.D.jpg'%}" alt="">
-                        <h2>Martin Musembi </h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
+                <div class="card">
+                    <img src="{% static 'images/David.jpg'%}" alt="profile image" class="david">
+                    <h1>David</h1>
+                    <p class="title">Front End Developer</p>
+                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    </ul>
+                </div>
 
-                    <div class="member_card">
-                        <img src="" alt="">
-                        <h2>David Nanjila</h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
+                <div class="card">
+                    <img src="{% static 'images/Karuga.jpg'%}" alt="" class="karuga">
+                    <h1>Martin Musembi</h1>
+                    <p class="title">Front End Developer</p>
+                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    </ul>
+                </div>
 
-                    <div class="member_card">
-                        <img src="" alt="">
-                        <h2>Eunice </h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="member_card">
-                        <img src="{% static 'images\Reuben.jpg'%}" alt="">
-                        <h2>Reuben </h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="member_card">
-                        <img src="" alt="">
-                        <h2>Martin Musembi </h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="member_card">
-                        <img src="" alt="">
-                        <h2>Martin Musembi </h2>
-                        <h5>FrontEnd Developer</h5>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-
+                <div class="card">
+                    <img src="images/Martin F.E.D.jpg" alt="">
+                    <h1>Martin Musembi</h1>
+                    <p class="title">Front End Developer</p>
+                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    </ul>
                 </div>
             </div>
         </div>
-    </main>
-        <footer class="social">
-            <hr>
-            <h2>Visit Our Social Media</h2>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            </footer>
-
+    </section>
 </body>
 </html>
