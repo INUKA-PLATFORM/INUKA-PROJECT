@@ -4,22 +4,23 @@
     box-sizing: border-box;
 }
 
-html {
+/* html {
     font-size: 10px;
     font-family: "Roboto" sans-serif;
-}
+} */
 
-a {
+/* a {
     text-decoration: none;
     color: #fff;
-}
+} */
 
-section {
+main-body{
     padding: 10rem 0;
     background-color: #fff;
-}
+    margin-top: 100px;
+} 
 
-.heading {
+/* .heading {
     text-transform: uppercase;
     font-size: 3.5rem;
     letter-spacing: 3px;
@@ -28,9 +29,9 @@ section {
     text-align: center;
     color: #333;
     position: relative;
-}
+} */
 
-.heading::after {
+/* .heading::after {
     content: "";
     width: 10rem;
     height: 8rem;
@@ -40,16 +41,17 @@ section {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2rem;
-}
+} */
 
-.card-wrapper {
+.card-content {
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: column;
+    margin-top: 3000px;
 }
 
-.card {
+.card-c{
     width: 32rem;
     background-color: #ebeef8;
     display: flex;
@@ -60,11 +62,10 @@ section {
     box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
-.card .card-img {
+.card-c .card-img {
     width: 100%;
     height: 26rem;
-    object-fit: cover;
-    -webkit-clip-path: 
+    object-fit: cover; 
 }
 
 .profile-img {
@@ -86,7 +87,7 @@ section {
     height: 214px;
 }
 
-.card h1{
+.card-c h1{
     font-size: 2.5rem;
     color: #333;
     margin: 1.5rem 0; 
@@ -106,7 +107,7 @@ section {
     color: #333;
 }
 
-.card .btn {
+.card-c .btn {
     padding: 1rem 2.5rem;
     background-color: #445ae3;
     border-radius: 2rem;
@@ -117,12 +118,12 @@ section {
     transition: all .5s;
 }
 
-.card .btn:hover{
+.card-c .btn:hover{
     transform: translateY(-2px);
     box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, 0.2);
 }
 
-.card .btn:active{
+.card-c .btn:active{
     transform: translateY(-2px);
     box-shadow: none;
 }
@@ -161,7 +162,7 @@ section {
     color: #3b5999;
 }
 
-..fa-linkedin:hover,
+.fa-linkedin:hover,
 .fa-github:hover,
 .fa-facebook:hover, 
 .fa-instagram:hover,
@@ -176,7 +177,7 @@ section {
         justify-content: center;
         align-items: center;
     }
-    .card {
+    .card-c {
         margin: 2rem;
     }
 
@@ -189,17 +190,17 @@ section {
         }
     }
 
-        .card:nth-child(1) {
+        .card-c:nth-child(1) {
             animation: fadeIn .5s .5s backwards;
         }
 
         .card:nth-child(2) {
             animation: fadeIn .5s 1s backwards;
         }
-        .card:nth-child(3) {
+        .card-c:nth-child(3) {
             animation: fadeIn .5s 1.5s backwards;
         }
-        .card:nth-child(4) {
+        .card-c:nth-child(4) {
             animation: fadeIn .5s 2s backwards;
         }
 
