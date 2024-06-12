@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KickOutHunger</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- External CSS file link -->
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/aboutus.css' %}?{% now 'U' %}" type="text/css">
 </head>
@@ -29,7 +32,8 @@
                 <li><a href="{% url 'admin' %}">Admin</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+
     <main>
         <div class="aboutUsdata">
             <h1>Our Cause</h1>
@@ -59,13 +63,15 @@
 
         </div>
     </main>
-        <footer class="social">
+        <!-- <footer class="social">
             <hr>
             <h2>Visit Our Social Media</h2>
             <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
             <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
-            </footer>
+            </footer> -->
 
-</body>
-</html>
+<!-- </body>
+</html> -->
+
+{% endblock  %}
