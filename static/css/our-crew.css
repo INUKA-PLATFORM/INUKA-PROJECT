@@ -46,15 +46,15 @@
     bottom: -2rem;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 2rem;
+    border-radius: 3rem;
 } 
 
 .card-wrapper {
     display: flex;
     align-items: center;
     align-content: center;
-    flex-direction: column;
-    margin-top: 300px;
+    flex-direction: row;
+    margin-top: 20px;
 }
 
 .card{
@@ -95,7 +95,7 @@
 .p_title {
     color: #454444;
     font-size: 1.4rem;
-    font-weight: 300;
+    font-weight: 350;
 }
 
 .brief {
@@ -104,7 +104,8 @@
     font-style: oblique;
     text-align: center;
     color: #1c1249;
-    padding: 5px;
+    padding: 8px;
+    justify-content: center;
 }
 
 .card .btn {
