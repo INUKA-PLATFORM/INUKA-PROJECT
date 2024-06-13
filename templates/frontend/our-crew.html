@@ -2,23 +2,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<!-- {% load static%}
-
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/our-crew.css' %}?{% now 'U' %}" type="text/css">--->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <title>KickOutHunger</title>
-</head>
-<body> -->
     
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" class="crewpg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,77 +16,95 @@
 </head>
 <body>
     
-    <section>
+    <section class="sectn">
         <div class="container">
-            <h1 class="heading">Meet The Team</h1>
+            <h1 class="team">Meet The Team</h1>
             <div class="card-wrapper">
                 <div class="card">
-                    <img src="{% static 'images/Martin F.E.D.jpg'%}" alt="profile image" class="profile.img">
+                    <img src="{% static 'images/logo.jpeg'%}" alt="card background" class="card_img">
+                    <img src="{% static 'images/Martin.jpg'%}" alt="profile image" class="profile_img">
                     <h1>Martin Musembi</h1>
-                    <p class="title">Front End Developer</p>
-                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <p class="p_title">Front End Developer</p>
+                    <p class="brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
                     <a href="#" class="btn">Contact</a>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    <ul class="social_media">
+                        <li><a href="#" class="s_m_l"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-facebook"></i></a></li>                       
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <img src="{% static 'images/logo.jpeg'%}" alt="card background" class="card_img">
+                    <img src="{% static 'images/David.png'%}" alt="profile image" class="profile_img">
+                    <h1>David Nanjila</h1>
+                    <p class="p_title">Front End Developer</p>
+                    <p class="brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social_media">
+                        <li><a href="#" class="s_m_l"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-facebook"></i></a></li>                       
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <img src="{% static 'images/logo.jpeg'%}" alt="card background" class="card_img">
+                    <img src="{% static 'images/Reuben.jpg'%}" alt="profile image" class="profile_img">
+                    <h1>Reuben</h1>
+                    <p class="p_title">Full-Stack Developer</p>
+                    <p class="brief">I bring a special blend of analytical brilliance and practical technological knowledge to my role as a fullstack Developer, having thrived as a Business Analyst before. I have a strong interest in Agile approaches and use my comprehension of business procedures to provide effective solutions that are user-focused. As a fullstack developer my dedication is turning ideas into practical applications</p>
+                    <a href="#" class="btn">Contact</a>
+                    <ul class="social_media">
+                        <li><a href="#" class="s_m_l"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-facebook"></i></a></li>                       
                     </ul>
                 </div>
 
                 <div class="card">
-                    <img src="{% static 'images/David.jpg'%}" alt="profile image" class="david">
-                    <h1>David</h1>
-                    <p class="title">Front End Developer</p>
-                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <img src="{% static 'images/logo.jpeg'%}" alt="card background" class="card_img">
+                    <img src="{% static 'images/Balala.jpg'%}" alt="profile image" class="profile_img">
+                    <h1>Sheikh Balala</h1>
+                    <p class="p_title">Back-End Developer</p>
+                    <p class="brief">    </p>
                     <a href="#" class="btn">Contact</a>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    <ul class="social_media">
+                        <li><a href="#" class="s_m_l"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-facebook"></i></a></li>                       
                     </ul>
                 </div>
 
                 <div class="card">
-                    <img src="{% static 'images/Karuga.jpg'%}" alt="" class="karuga">
-                    <h1>Martin Musembi</h1>
-                    <p class="title">Front End Developer</p>
-                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
+                    <img src="{% static 'images/logo.jpeg'%}" alt="card background" class="card_img">
+                    <img src="{% static 'images/Balala.jpg'%}" alt="profile image" class="profile_img">
+                    <h1>Solomon</h1>
+                    <p class="p_title">Back-End Developer</p>
+                    <p class="brief">    </p>
                     <a href="#" class="btn">Contact</a>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
+                    <ul class="social_media">
+                        <li><a href="#" class="s_m_l"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="s_m_l"><i class="fab fa-facebook"></i></a></li>                       
                     </ul>
                 </div>
 
-                <div class="card">
-                    <img src="images/Martin F.E.D.jpg" alt="">
-                    <h1>Martin Musembi</h1>
-                    <p class="title">Front End Developer</p>
-                    <p class="Brief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, rerum.</p>
-                    <a href="#" class="btn">Contact</a>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>                       
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 </body>
 </html>
 
-
-<!-- </body>
-</html> -->
 
 {% endblock %}
