@@ -2,8 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 :root {
-    background-color: #4C8B52;
+    /* background-color: #4C8B52; */
     background-color-dark: #242c38;
     secondary-color: #f7f7f7;
     text-dark: #242c38;
@@ -18,7 +20,7 @@
     margin: 0px;
     box-sizing: border-box;
     line-height: 1.5;
-    font-family: 'Inter', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
 
 }
 
@@ -1271,12 +1273,14 @@ a.team-title span.fa {
 }
 #facebook {
     color: #ffffff;
-    background-color: #6eba51;
+    /* background-color: #6eba51; */
+    background-color: #ffffff;
+    border:0.5px solid #158844;
     font-size: 1.5vh;
     font-weight: 700;
     padding: 2%;
     margin-right: 2%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #donate-button{
@@ -1284,6 +1288,8 @@ a.team-title span.fa {
     font-weight: 500;
     
 }
+
+
 .donate-info{
     margin-top: 150px;
 }
@@ -1392,3 +1398,4 @@ li {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
+

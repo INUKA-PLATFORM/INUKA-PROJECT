@@ -19,13 +19,14 @@
     {% block styles%}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     {% endblock styles %}
     <title>KickOutHunger</title>
 </head>
 
 <body>
-    {% include 'public/navbar.html'%}
+    {% include 'public_navbar.html'%}
     {% block content%}
 
     {% endblock content%}
