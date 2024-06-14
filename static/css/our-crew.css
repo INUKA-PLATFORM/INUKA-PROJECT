@@ -57,7 +57,7 @@
     margin-top: 20px;
 }
 
-.card{
+.crew-card{
     width: 32rem;
     background-color: #ebeef8;
     display: flex;
@@ -68,7 +68,7 @@
     box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
-.card .card_img {
+.crew-card .card_img {
     width: 100%;
     height: 26rem;
     object-fit: cover;
@@ -85,7 +85,7 @@
     border: 1rem solid #ebeef8;
 }
 
-.card h1{
+.crew-card h1{
     font-size: 2rem;
     color: #333;
     margin: 1.5rem 0;
@@ -108,7 +108,7 @@
     justify-content: center;
 }
 
-.card .btn {
+.crew-card .btn {
     padding: 1rem 2.5rem;
     background-color: #445ae3;
     border-radius: 2rem;
@@ -119,12 +119,12 @@
     transition: all .5s;
 }
 
-.card .btn:hover{
+.crew-card .btn:hover{
     transform: translateY(-2px);
     box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, 0.2);
 }
 
-.card .btn:active{
+.crew-card .btn:active{
     transform: translateY(-2px);
     box-shadow: none;
 }
@@ -178,7 +178,7 @@
         justify-content: center;
         align-items: center;
     }
-    .card {
+    .crew-card {
         margin: 2rem;
     }
 
@@ -191,17 +191,17 @@
         }
     }
 
-        .card:nth-child(1) {
+        .crew-card:nth-child(1) {
             animation: fadeIn .5s .5s backwards;
         }
 
-        .card:nth-child(2) {
+        .crew-card:nth-child(2) {
             animation: fadeIn .5s 1s backwards;
         }
-        .card:nth-child(3) {
+        .crew-card:nth-child(3) {
             animation: fadeIn .5s 1.5s backwards;
         }
-        .card:nth-child(4) {
+        .crew-card:nth-child(4) {
             animation: fadeIn .5s 2s backwards;
         }
 
