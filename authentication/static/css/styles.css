@@ -23,7 +23,8 @@ h3 {
 
 #login-page {
     
-    margin-top:7%;
+    margin-top:7
+    %;
 }
 
 strong {
@@ -104,12 +105,16 @@ strong {
 
 #facebook {
     /* background-color: #ffc703; */
-    color: #ffffff;
+    /* color: #ffffff; */
     background-color: #6eba51;
     font-size: 1.5vh;
     font-weight: 700;
     padding: 2%;
     margin-right: 2%;
+}
+.link-icon{
+  background: none;
+  text-decoration: none;
 }
 
 #twitter {
@@ -885,4 +890,17 @@ a.team-title span.fa {
 }
 #strong{
   font-family: "Nunito Sans", sans-serif;
+}
+/* .column {
+  text-align: center;
+} */
+/* #social-media-de-icons{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+} */
+#social-media-de-icons li {
+  margin: 0 10px;
 }
