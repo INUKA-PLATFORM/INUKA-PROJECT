@@ -22,10 +22,8 @@ h3 {
 }
 
 #login-page {
-    background-image: url("/static/images/tiny.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* height: 100vh; */
+    
+    margin-top:7%;
 }
 
 strong {
