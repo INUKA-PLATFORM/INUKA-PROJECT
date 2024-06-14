@@ -15,9 +15,7 @@
             </li>
             <li><a href="{% url 'concept' %}">Concept</a></li>
             <li><a href="{% url 'cause' %}">Cause</a></li>
-            <a href="{% url 'donate' %}">
-                <button type="button" class="btn btn-success btn-lg" id="donate-button"><i class="fa-solid fa-heart"></i> Donate</button>
-            </a>
+            
             {% if user.is_authenticated %}
             <li class="dropdown">
                 <a href="{% url 'aboutus' %}"></a>
@@ -40,12 +38,18 @@
             
 
             {% else %}
-            <a href="{% url 'login' %}">
-                <a href="{% url 'login' %}">
-                    <button type="button" class="btn btn-success btn-lg" id="donate-button"> Login <i class="fa-solid fa-right-to-bracket"></i></button>
-                </a>
-            </a>
+            <li class="dropdown">
+                <a href="{% url 'aboutus' %}">Join Us</a>
+                <ul class="dropdown-content">
+                    <li><a href="{% url 'register' %}">Student Registration</a></li>
+                    <li><a href="{% url 'register' %}">Donations</a></li>
+                    <li><a href="{% url 'register' %}">Volunteer Registration</a></li>
+                </ul>
+            </li>
             {% endif %}
+            <a href="{% url 'donate' %}">
+                <button type="button" class="btn btn-success btn-lg" id="donate-button"><i class="fa-solid fa-heart"></i> Donate</button>
+            </a>
         </ul>
     </div>
 </nav>
