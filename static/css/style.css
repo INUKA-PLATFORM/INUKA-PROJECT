@@ -41,7 +41,19 @@
     margin: auto;
     display: block;
 }
-
+/*Feed a student glowing effect
+    */
+@keyframes glowing {
+        0% { box-shadow: 0 0 10px #33ff33; }
+        50% { box-shadow: 0 0 20px #33ff33; }
+        100% { box-shadow: 0 0 10px #33ff33; }
+}
+    
+    /* Apply the glowing effect to the button */
+ .glowing-btn {
+        animation: glowing 1s infinite;
+        
+}
 /*navigation menu Bar*/
 nav {
     width: 100%;

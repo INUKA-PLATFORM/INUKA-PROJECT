@@ -30,8 +30,11 @@
             </div>
             <div class="action_btn">
                 <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
-                <button class="donate"><a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5"><strong>Feed a Student</strong></a></button>
-
+                <button class="donate glowing-btn">
+                    <a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5 glowing-btn">
+                        <strong>Feed a Student</strong>
+                    </a>
+                </button>
             </div>
         </div>
         <div class="home-image">
@@ -41,6 +44,5 @@
     </div>
 </section>
 
-
-
+<link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock %}
