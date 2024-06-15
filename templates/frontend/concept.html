@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/concept.css' %}?{% now 'U' %}" type="text/css">
 <body>
 
 <main class="body-main-concept">
@@ -14,7 +14,7 @@
     <section>
         <button class="collapsible text-success">Objectives</button>
         <div class="content-concept">
-            <div class="card-container">
+            <div class="objct_card_container">
                 <div class="card card-concept">
                     <h3>Alleviate Hunger</h3>
                     <p>Ensure that all university students, regardless of their financial background, have access to at least one nutritious meal a day.</p>
@@ -34,22 +34,40 @@
     <section>
         <button class="collapsible text-success">How it Works</button>
         <div class="content-concept">
-            <h3>Crowdsourcing for Funds</h3>
-            <ul>
-                <li><strong>Website Platform:</strong> Project Inuka raises funds through the crowdsourcing website "project-inua comrade".</li>
-                <li><strong>Donations:</strong> The platform accepts one-time gifts, monthly donations, and gifts in kind from well-wishers, corporate partners, and alumni.</li>
-                <li><strong>Transparency:</strong> Regular updates and reports are provided to donors to maintain transparency and accountability.</li>
-            </ul>
-            <h3 class="text-success">Application for Meal Cards</h3>
-            <ul>
-                <li><strong>Student Application:</strong> Students who face financial challenges and can barely afford meals can apply for a meal card through the Project Inuka website.</li>
-                <li><strong>Vetting Process:</strong> Applications are vetted with the assistance of the campus administration to ensure that support reaches the students most in need.</li>
-            </ul>
-            <h3>Distribution of Meal Cards</h3>
-            <ul>
-                <li><strong>Issuance of Cards:</strong> Qualified students receive a meal card loaded with credit that covers the cost of meals for a semester.</li>
-                <li><strong>Accessibility:</strong> These meal cards can be used at the campus cafeteria, ensuring easy access to nutritious food.</li>
-            </ul>
+            
+        <div class="how_it_works_container">
+            
+            <div class="sourcing_funds">
+                <div class="card card-concept">
+                    <h3>Crowdsourcing for Funds</h3>
+                        <ul>
+                            <li><strong>Website Platform:</strong> Project <Strong>KickOutHunger</Strong> raises funds through the crowdsourcing website "KickOutHunger".</li>
+                            <li><strong>Donations:</strong> The platform accepts one-time gifts, monthly donations, and gifts in kind from well-wishers, corporate partners, and alumni.</li>
+                            <li><strong>Transparency:</strong> Regular updates and reports are provided to donors to maintain transparency and accountability.</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="meal_cards">
+            <div class="card card-concept">
+                <h3 class="text-success">Application for Meal Cards</h3>
+                <ul>
+                    <li><strong>Student Application:</strong> Students who face financial challenges and can barely afford meals can apply for a meal card through the Project Inuka website.</li>
+                    <li><strong>Vetting Process:</strong> Applications are vetted with the assistance of the campus administration to ensure that support reaches the students most in need.</li>
+                </ul>
+            </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="meal_cards_distribution">
+            <div class="card card-concept">
+                <h3 class="text-success">Distribution of Meal Cards</h3>
+                <ul>
+                    <li><strong>Issuance of Cards:</strong> Qualified students receive a meal card loaded with credit that covers the cost of meals for a semester.</li>
+                    <li><strong>Accessibility:</strong> These meal cards can be used at the campus cafeteria, ensuring easy access to nutritious food.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -60,16 +78,18 @@
 
     <section>
         <button class="collapsible text-success">How to Get Involved</button>
-        <div class="content-concept">
-            <div class="card-container">
+	<div class="content-concept">
+        	
+            
+            <div class="how_card_container">
                 <div class="card card-concept">
                     <h3>Well-Wishers and Alumni</h3>
                     <p><strong>Donate:</strong> Make a one-time gift or set up a monthly donation through the Project Inuka website.</p>
                     <p><strong>Share:</strong> Spread the word about Project Inuka within your networks to help raise awareness and funds.</p>
                 </div>
-            </div>
+            
             <div class="section-divider"></div>
-            <div class="card-container">
+            
                 <div class="card card-concept">
                     <h3>Corporate Partners</h3>
                     <p><strong>Partnership Opportunities:</strong> Engage in corporate social responsibility by partnering with Project Inuka to provide financial support, food donations, or other resources.</p>
@@ -79,13 +99,7 @@
         </div>
     </section>
 
-    <!-- Uncomment the following sections to include them -->
-    <!--
-    <section>
-        <h2>Conclusion</h2>
-        <p>Project Inuka is more than just a feeding program; it is a lifeline for university students who struggle to meet their basic nutritional needs. By bringing together the collective efforts of the community, we can ensure that every student has the opportunity to focus on their education without the distraction of hunger. Join us in making a difference — one meal at a time.</p>
-    </section>
-    -->
+
 </main>
 
 <script>
@@ -103,7 +117,6 @@
     }
 </script>
 
-<!-- </body>
-</html> -->
+
 
 {% endblock %}
