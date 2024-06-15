@@ -3,105 +3,116 @@
 {% block content %}
 <main class="donate-info"> 
     <h2 class="text-center">Donate to KickOutHunger</h2>
-    <p class="p-3 custom-shadow-green rounded mx-2">
-        Thank you for considering a donation to KickOutHunger. Your generosity will help us continue our mission to provide nutritious meals to university students in need. Every donation makes a difference, no matter how big or small. Together, we can kick out student hunger and create a brighter future for all.
-    </p>
-
+    <div class="p-3 custom-shadow-green rounded mx-3 d-flex flex-row align-items-center">
+        <p class="w-50 m-2 mt-0 lh-lg">
+            Thank you for considering a donation to KickOutHunger. Your generosity will help us continue our mission to provide nutritious meals to university students in need. Every donation makes a difference, no matter how big or small. Together, we can kick out student hunger and create a brighter future for all.
+        </p>
+        <img class="donation-image w-50 m-2 rounded" src="{% static 'images/student-eating.jfif' %}" alt="A student eating">
+    </div>
+    
     <!-- Donors Data collection form -->
     <div id="donation-container">
         <!-- Donorbox Donation Button Script -->
-        <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css"><script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" data-style="background: rgb(2, 56, 49); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
-
+        <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css">
+        <script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" data-style="background: rgb(2, 56, 49); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
     </div>
 
     <div class="container mt-5">
-        <form action="" method="POST" class="custom-shadow-green rounded p-4 w-80">
-            {% csrf_token %}
-            <h3 class="text-center">Donors Information</h3>
-            
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+        <div class="row custom-shadow-green rounded" >
+            <div class="col-md-6 d-flex align-items-center">
+                <img class="img-fluid rounded" src="{% static 'images/2-studentseat.jfif' %}" alt="A donation related image">
             </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="country">Country</label>
-                <input type="text" class="form-control" name="country" id="country" placeholder="Enter your country" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" class="form-control" name="city" id="city" placeholder="Enter your city" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="university">University</label>
-                <input type="text" class="form-control" name="university" id="university" placeholder="Enter the university you are donating to" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Donation Amount</label><br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="donation-amount" id="amount25" value="25">
-                    <label class="form-check-label" for="amount25">$25</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="donation-amount" id="amount50" value="50">
-                    <label class="form-check-label" for="amount50">$50</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="donation-amount" id="amount100" value="100">
-                    <label class="form-check-label" for="amount100">$100</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="donation-amount" id="amount250" value="250">
-                    <label class="form-check-label" for="amount250">$250</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="donation-amount" id="amountOther" value="other">
-                    <label class="form-check-label" for="amountOther">Other</label>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="amount">Amount (if Other selected)</label>
-                <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount in USD">
-            </div>
-            
-            <div class="form-group">
-                <label>Payment Method</label><br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="payment-method" id="paymentCreditCard" value="credit-card">
-                    <label class="form-check-label" for="paymentCreditCard">Credit Card</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="payment-method" id="paymentPayPal" value="paypal">
-                    <label class="form-check-label" for="paymentPayPal">PayPal</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="payment-method" id="paymentBankTransfer" value="bank-transfer">
-                    <label class="form-check-label" for="paymentBankTransfer">Bank Transfer</label>
-                </div>
-            </div>
+            <div class="col-md-6">
+                <form action="" method="POST" class="donation-form  rounded p-4">
+                    {% csrf_token %}
+                    <h3 class="text-center">Donors Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" class="form-control" name="country" id="country" placeholder="Enter your country" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" id="city" placeholder="Enter your city" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="university">University</label>
+                        <input type="text" class="form-control" name="university" id="university" placeholder="Enter the university you are donating to" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Donation Amount</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="donation-amount" id="amount25" value="25">
+                            <label class="form-check-label" for="amount25">$25</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="donation-amount" id="amount50" value="50">
+                            <label class="form-check-label" for="amount50">$50</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="donation-amount" id="amount100" value="100">
+                            <label class="form-check-label" for="amount100">$100</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="donation-amount" id="amount250" value="250">
+                            <label class="form-check-label" for="amount250">$250</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="donation-amount" id="amountOther" value="other">
+                            <label class="form-check-label" for="amountOther">Other</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">Amount (if Other selected)</label>
+                        <input type="number" class="form-control" name="amount" id="amount" placeholder="Enter amount in USD">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Payment Method</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment-method" id="paymentCreditCard" value="credit-card">
+                            <label class="form-check-label" for="paymentCreditCard">Credit Card</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment-method" id="paymentPayPal" value="paypal">
+                            <label class="form-check-label" for="paymentPayPal">PayPal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment-method" id="paymentBankTransfer" value="bank-transfer">
+                            <label class="form-check-label" for="paymentBankTransfer">Bank Transfer</label>
+                        </div>
+                    </div>
 
-            <div class="d-flex justify-content-between px-5">
-                <button type="submit" class="btn btn-primary">Donate</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                    <div class="d-flex justify-content-between px-5">
+                        <button type="submit" class="btn btn-primary">Donate</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
             </div>
-        </form>
+           
+        </div>
     </div>
 </main>
-
+<link rel="stylesheet" href="{% static 'css/donate.css' %}">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
