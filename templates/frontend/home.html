@@ -7,22 +7,22 @@
     <div class="section_container">
         <div class="content">
 
-            <h2 class="sub-title">Welcome to <span>KickOutHunger initiative</span></h2>
-            <p class="inuka_brief">
-                Kick Out Hunger is a non-profit organisation that aims to eradicate college hunger.
+            <h2 class="sub-title">Welcome to <span class="text-success">KickOutHunger initiative</span></h2>
+            <p class="inuka_brief custom-shadow-green rounded p-2">
+               <span class="text-success">Kick Out Hunger </span>is a non-profit organisation that aims to eradicate college hunger.
             </p>
             <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css"><script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" data-style="background: rgb(2, 56, 49); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
 
             <div class="vision">
-                <h3>Vision</h3>
-                <p class="vision-p">
+                <h3 class="text-primary">Vision</h3>
+                <p class="vision-p custom-shadow-green rounded p-2">
                     Our vision is to ensure that every university student in Kenya has consistent access to nutritious
                     food, empowering them to excel academically and thrive personally.
                 </p>
             </div>
             <div class="mission">
-                <h3>Mission</h3>
-                <p class='Mission-p'>Food insecurity is a significant issue affecting countless university students.
+                <h3 class="text-primary">Mission</h3>
+                <p class='Mission-p custom-shadow-green rounded p-2'>Food insecurity is a significant issue affecting countless university students.
                     Many struggle to afford nutritious meals while balancing the demands of their academic pursuits. We
                     aim to alleviate this burden by connecting these students with donors who are passionate about
                     making a difference in their lives.</p>
@@ -30,8 +30,11 @@
             </div>
             <div class="action_btn">
                 <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
-                <button class="donate">Feed a Student</button>
-
+                <button class="donate glowing-btn">
+                    <a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5 glowing-btn">
+                        <strong>Feed a Student</strong>
+                    </a>
+                </button>
             </div>
         </div>
         <div class="home-image">
@@ -41,6 +44,5 @@
     </div>
 </section>
 
-
-
+<link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock %}
