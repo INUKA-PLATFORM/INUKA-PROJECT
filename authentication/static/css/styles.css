@@ -6,21 +6,25 @@
 
 @import url(https://db.onlinewebfonts.com/c/39a2c7f346d5cfae7045aeb2fb50d9ad?family=Lulo+Clean+W01+One+Bold);
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
 
     box-sizing: border-box;
 }
 
 h3 {
-    font-family: "Lulo Clean W01 One Bold";
+    /* font-family: "Lulo Clean W01 One Bold"; */
+    font-family: "Nunito Sans", sans-serif;
 }
 
 #login-page {
-    background-image: url("/static/images/tiny.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* height: 100vh; */
+    
+    margin-top:7
+    %;
 }
 
 strong {
@@ -101,12 +105,16 @@ strong {
 
 #facebook {
     /* background-color: #ffc703; */
-    color: #ffffff;
+    /* color: #ffffff; */
     background-color: #6eba51;
     font-size: 1.5vh;
     font-weight: 700;
     padding: 2%;
     margin-right: 2%;
+}
+.link-icon{
+  background: none;
+  text-decoration: none;
 }
 
 #twitter {
@@ -160,10 +168,9 @@ strong {
 }
 
 #register-page {
-    background-image: url("/static/images/tiny.jpg");
-    background-repeat: no-repeat;
+    
     background-size: cover;
-    /* height: 94.5vh; */
+    margin-top:9%;
     margin-bottom: 4%;
 
 }
@@ -881,4 +888,19 @@ a.team-title span.fa {
     font-weight: bold;
     color: #ffffff;
 }
+#strong{
+  font-family: "Nunito Sans", sans-serif;
+}
+/* .column {
+  text-align: center;
+} */
+/* #social-media-de-icons{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
 
+} */
+#social-media-de-icons li {
+  margin: 0 10px;
+}

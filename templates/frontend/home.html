@@ -2,63 +2,27 @@
 {% load static %}
 {% block content %}
 
-<!-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KickOutHunger</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}" type="text/css">
-</head>
-<body> -->
-
-<!-- <nav>
-        <div class="nav_content">
-            <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
-            <ul>
-                <li class="dropdown">
-                    <a href="{% url 'aboutus' %}">About</a>
-                    <ul class="dropdown-content">
-                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
-                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'concept' %}">Concept</a></li>
-                <li><a href="{% url 'cause' %}">Cause</a></li>
-                <li><a href="{% url 'donate' %}">Donate</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'admin' %}">Admin</a></li>
-            </ul>
-        </div>
-    </nav> -->
-
 <!-- Home page -->
 <section class="section">
     <div class="section_container">
         <div class="content">
 
-            <h2 class="sub-title">Welcome to <span>KickOutHunger initiative</span></h2>
-            <p class="inuka_brief">
-                Kick Out Hunger is a non-profit organisation that aims to eradicate college hunger.
+            <h2 class="sub-title">Welcome to <span class="text-success">KickOutHunger initiative</span></h2>
+            <p class="inuka_brief custom-shadow-green rounded p-2">
+               <span class="text-success">Kick Out Hunger </span>is a non-profit organisation that aims to eradicate college hunger.
             </p>
-            <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css">
-            <script type="text/javascript" id="donorbox-donate-button-installer"
-                src="https://donorbox.org/install-donate-button.js"
-                data-href="https://donorbox.org/kick-out-hunger-feeding-dreams?default_interval=o"
-                data-style="background: rgb(2, 126, 53); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);"
-                data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
+            <link rel="stylesheet" type="text/css" href="https://donorbox.org/animate-popup-donate-button.css"><script type="text/javascript" id="donorbox-donate-button-installer" src="https://donorbox.org/install-donate-button.js" data-href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" data-style="background: rgb(2, 56, 49); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; font-size: 16px; padding: 8px 22px 8px 18px; border-radius: 0px 0px 5px 5px; gap: 8px; width: fit-content; line-height: 24px; position: fixed; top: 50%; transform-origin: center center; z-index: 9999; overflow: hidden; left: 20px; transform: translate(-50%, -50%) rotate(-90deg);" data-button-cta="Donate" data-img-src="https://donorbox.org/images/white_logo.svg"></script>
 
             <div class="vision">
-                <h3>Vision</h3>
-                <p class="vision-p">
+                <h3 class="text-primary">Vision</h3>
+                <p class="vision-p custom-shadow-green rounded p-2">
                     Our vision is to ensure that every university student in Kenya has consistent access to nutritious
                     food, empowering them to excel academically and thrive personally.
                 </p>
             </div>
             <div class="mission">
-                <h3>Mission</h3>
-                <p class='Mission-p'>Food insecurity is a significant issue affecting countless university students.
+                <h3 class="text-primary">Mission</h3>
+                <p class='Mission-p custom-shadow-green rounded p-2'>Food insecurity is a significant issue affecting countless university students.
                     Many struggle to afford nutritious meals while balancing the demands of their academic pursuits. We
                     aim to alleviate this burden by connecting these students with donors who are passionate about
                     making a difference in their lives.</p>
@@ -66,8 +30,11 @@
             </div>
             <div class="action_btn">
                 <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
-                <button class="donate">Feed a Student</button>
-
+                <button class="donate glowing-btn">
+                    <a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5 glowing-btn">
+                        <strong>Feed a Student</strong>
+                    </a>
+                </button>
             </div>
         </div>
         <div class="home-image">
@@ -77,15 +44,5 @@
     </div>
 </section>
 
-<!-- <footer class="social">
-            <hr />
-            <h4>Visit Our Social Media</h4>
-            <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
-            <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
-            <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        </footer> -->
-<!-- <script src="https://donorbox.org/widget.js" paypalExpress="true"></script><iframe src="https://donorbox.org/embed/kick-out-hunger-feeding-dreams?language=en" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important" allow="payment"></iframe>      -->
-<!-- </body>
-</html> -->
-
+<link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock %}
