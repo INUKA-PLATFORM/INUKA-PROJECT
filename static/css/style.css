@@ -126,7 +126,10 @@ h3 {
     margin: 5% 0% 5% 0%;
 
 }
-
+.custom-shadow-green {
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.5); /* Green shadow with transparency */
+    transition: box-shadow 0.3s ease-in-out; /* Transition for fade effect */
+}
 .inuka_brief {
     text-align: center;
     font-size: 1.2rem;
