@@ -1,53 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="author" content="slickplan.com">
-<title>Cause | PROJECT-INUKA</title>
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-<div id="wrapper">
-<nav>
-<ul>
-<li><a href="index.html">Home page/ Landing Page</a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="cause.html">Cause</a></li>
-<li><a href="concept.html">Concept</a></li>
-<li>
-<a href="our-crew.html">Our Crew</a>
-<ul>
-<li><a href="our-crew/david.html">David</a></li>
-<li><a href="our-crew/martin.html">Martin</a></li>
-<li><a href="our-crew/barasa.html">Barasa</a></li>
-<li><a href="our-crew/vivian.html">Vivian</a></li>
-<li><a href="our-crew/yunis.html">Yunis</a></li>
-</ul>
-</li>
-<li>
-<a href="donate.html">Donate</a>
-<ul>
-<li><a href="donate/monthly-giving.html">Monthly giving</a></li>
-<li><a href="donate/one-time-gift.html">One Time Gift</a></li>
-<li>
-<a href="donate/corporate-partners.html">Corporate partners</a>
-<ul>
-<li><a href="donate/corporate-partners/partner-with-us.html">Partner with Us</a></li>
-</ul>
-</li>
-<li>
-<a href="donate/marchendise.html">Marchendise</a>
-<ul>
-<li><a href="donate/marchendise/gifts-in-kund.html">Gifts in Kund</a></li>
-<li><a href="donate/marchendise/students-work.html">Students work</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<div id="main">
-</div>
-</div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/cause.css' %}?{% now 'U' %}" type="text/css">
+
+<main>
+    <div class="our_cause_data">
+        <h1 class="cause_heading">Our Cause</h1>
+        <p>
+            Welcome to <strong>KickOutHunger,</strong> a passionate and dedicated organization committed to eradicating food insecurity among university students. 
+            At KickOutHunger, we believe that no student should face the heart-wrenching choice between pursuing their education and finding their 
+            next meal. Our mission is to bridge the gap between students in need and the compassionate individuals and organizations willing to lend a helping hand.
+        </p>
+        <h2 class="why_we_exist">Why We Exist</h2>
+        <p>
+            Every day, countless university students struggle with the basic necessity of securing adequate food. This silent crisis often goes unnoticed, 
+            yet it profoundly impacts students' academic performance, mental health, and overall well-being. We recognize that a hungry student cannot focus 
+            on their studies, and we are determined to change that.
+        </p>
+        <h3 class="h2help">How We Help</h3>
+        <div class="cause_card_container">
+            <div class="card_generosity">
+                <p><strong class="highlight">Connecting Generosity with Need:</strong> Through our crowdsourcing platform, we connect students facing food insecurity with compassionate donors. 
+                Your contributions, whether big or small, make a tangible difference in the lives of students striving to achieve their educational dreams.</p>
+            </div>
+            <div class="card_volunteer">
+                <p><strong class="highlight">Volunteering Opportunities:</strong> We provide numerous opportunities for individuals to get involved. Whether it's organizing food drives, delivering meals, 
+                or spreading awareness about our cause, your time and effort are invaluable to our mission.</p>
+            </div>
+            <div class="card_awareness">
+                <p><strong class="highlight">Raising Awareness:</strong> By sharing the stories of students in need and the impact of your contributions, we aim to raise awareness about the pervasive 
+                issue of food insecurity on campuses. We can amplify the conversation and inspire others to join our cause.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

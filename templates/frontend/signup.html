@@ -1,53 +1,46 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
-    <link rel="stylesheet" href="{% static 'css/signup.css' %}?{% now 'U' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' % }?{% now 'U' %}">
-</head>
-<body>
-    <nav>
-        <div class="nav_content">
-            <div class="logo"><a href="{% url 'home'%}"><img class="log-img" src="{% static 'images/logo.jpeg'%}"></a><h1 class="header-text"><a href="{% url 'home' %}">KickOutHunger</a></h1></div>
-            <ul>
-                <li class="dropdown">
-                    <a href="{% url 'aboutus' %}">About</a>
-                    <ul class="dropdown-content">
-                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
-                        <li><a href="{% url 'our-crew' %}">Our Crew</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'concept' %}">Concept</a></li>
-                <li><a href="{% url 'cause' %}">Cause</a></li>
-                <li><a href="{% url 'donate' %}">Donate</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'admin' %}">Admin</a></li>
-            </ul>
+{% block content %}
+<div class="container signup-f mt-120">
+    <h1 class="text-center">Sign Up as a Student</h1>
+    <p class="text-center">Kindly fill in the form below to create an account with us</p>
+
+    <form action="signup.php" method="post" class="signupform custom-shadow-green mb-3 px-3 py-3">
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" required>
         </div>
-    </nav>
-    <h1 class="mt">SignUp as a student</h1>
-    <p>Fill in the form below to create an account</p>
-    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
-    <form action="signup.php" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required ><br><label for="University">University</label><input type="text" name="University" required><br>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required><br>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required><br>
-        <button type="submit">Sign Up</button> <a href="{% url 'login' %}"><button>Login</button></a>
-        <p><a href="{% url 'home' %}">Home</a></p>
+        <div class="mb-3">
+            <label for="University">University</label>
+            <input type="text" name="University" class="form-control" required>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+            <div class="w-50 me-2">
+                <label for="Course">Course</label>
+                <input type="text" name="Course" class="form-control" required>
+            </div>
+            <div class="w-25">
+                <label for="Year">Year</label>
+                <input type="text" name="Year" class="form-control" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="form-control" required>
+        </div>
+        <div class="d-flex justify-content-between px-5">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="button" class="btn btn-secondary"><a href="{% url 'login' %}" class="text-white text-decoration-none">Login</a></button>
+        </div>
+        <p class="mt-3"><a href="{% url 'home' %}">Home</a></p>
     </form>
-    <footer class="social">
-        <hr>
-        <h2>Visit Our Social Media</h2>
-        <a href="https://www.linkedin.com/in/david-nanjila" class="fa fa-linkedin"></a>
-        <a href="https://github.com/stoicdavi" class="fa fa-github"></a>
-        <a href="https://twitter.com/" class="fa fa-twitter"></a>
-        </footer>
-</body>
-</html>
+</div>
+{% endblock %}

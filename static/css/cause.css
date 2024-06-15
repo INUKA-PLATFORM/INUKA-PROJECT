@@ -1,0 +1,87 @@
+.main-content{
+    margin: 60px;
+    background-color: brown;
+}
+
+.our_cause_data {
+    margin: 150px;
+    padding: 40px;  /* Added padding around the content */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cause_heading {
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.why_we_exist {
+    border: 2px solid #516a85;
+    padding: 8px;
+    background-color: #e6f7ff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.h2help {
+    border: 2px solid #28a745;
+    padding: 6px;
+    background-color: #e6ffe6;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/*p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+} */
+
+.highlight {
+    display: block;
+    margin-bottom: 10px; /* Adds space between the highlighted text and the following paragraph */
+    font-weight: bold;
+}
+
+.cause_card_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  /* Arrange cards in a column */
+    gap: 20px; /* Add space between the cards */
+    margin-top: 20px;
+}
+
+.card_generosity {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+}
+
+.card_volunteer {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card_awareness {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
