@@ -1,0 +1,21 @@
+/* signup.css */
+.signup-f{
+    margin-top: 120px;
+}
+.signupform {
+    border-radius: 10px; /* Custom border radius */
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.5); /* Custom shadow with green tint */
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Ensure form controls have proper spacing and width */
+.form-control {
+    margin-bottom: 15px;
+}
+
+.custom-shadow-green {
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.5); /* Custom green shadow */
+}
