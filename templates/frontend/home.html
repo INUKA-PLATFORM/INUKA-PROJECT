@@ -3,6 +3,7 @@
 {% block content %}
 
 <!-- Home page -->
+
 <section class="section">
     <div class="section_container">
         <div class="content">
@@ -29,7 +30,7 @@
 
             </div>
             <div class="action_btn">
-                <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
+                <button class="apply"><a href="{% url 'register' %}">Enroll to Program</a></button>
                 <button class="donate glowing-btn">
                     <a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5 glowing-btn">
                         <strong>Feed a Student</strong>
@@ -43,6 +44,9 @@
 
     </div>
 </section>
+
+<!-- courasel -->
+
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock %}
