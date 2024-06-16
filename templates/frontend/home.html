@@ -3,6 +3,7 @@
 {% block content %}
 
 <!-- Home page -->
+
 <section class="section">
     <div class="section_container">
         <div class="content">
@@ -16,7 +17,7 @@
             <div class="vision">
                 <h3 class="text-primary">Vision</h3>
                 <p class="vision-p custom-shadow-green rounded p-2">
-                    Our vision is to ensure that every university student in Kenya has consistent access to nutritious
+                    To ensure that every university student in Kenya has consistent access to nutritious
                     food, empowering them to excel academically and thrive personally.
                 </p>
             </div>
@@ -29,7 +30,7 @@
 
             </div>
             <div class="action_btn">
-                <button class="apply"><a href="{% url 'signup' %}">Enroll to Program</a></button>
+                <button class="apply"><a href="{% url 'register' %}">Enroll to Program</a></button>
                 <button class="donate glowing-btn">
                     <a href="https://donorbox.org/kick-out-hunger-feeding-dreams-1?default_interval=o" class="text-success fw-12 fs-5 glowing-btn">
                         <strong>Feed a Student</strong>
@@ -38,11 +39,14 @@
             </div>
         </div>
         <div class="home-image">
-            <img class="home-img1" src="{% static 'images/food.jpg' %}" alt="home-image">
+            <img class="home-img1" src="{% static '\images\istockphoto.jpg' %}" alt="home-image">
         </div>
 
     </div>
 </section>
+
+<!-- courasel -->
+
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock %}
