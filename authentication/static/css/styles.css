@@ -310,14 +310,14 @@ strong {
   height: 35px;
   line-height: 35px;
   display: block;
-  background: #343434;
+  /* background: #343434; */
   border-radius: var(--border-radius); }
 
-.w3l-footer-main .footer-14 .column ul li a:hover {
-  background: #fff; }
+/* .w3l-footer-main .footer-14 .column ul li a:hover {
+  background: #fff; } */
 
-.w3l-footer-main .footer-14 .column ul li span {
-  color: #b9b9b9; }
+/* .w3l-footer-main .footer-14 .column ul li span {
+  color: #b9b9b9; } */
 
 .w3l-footer-main .footer-14 .column ul li {
   display: inline-block; }
@@ -325,7 +325,7 @@ strong {
 .w3l-footer-main .footer-14 ul.links li a {
   font-size: 17px;
   line-height: 25px;
-  color: #b9b9b9; }
+  color: #ffffff; }
 
 .w3l-footer-main .footer-14 .footers14-bottom {
   margin-top: 50px;
@@ -346,43 +346,6 @@ strong {
 
 .w3l-footer-main .footer-14 .copyright a:hover {
   text-decoration: underline; }
-
-.w3l-footer-main .footer-14 .language-select select {
-  font-style: normal;
-  font-weight: normal;
-  line-height: 20px;
-  position: relative;
-  background: #343434;
-  outline: none;
-  width: 100%;
-  font-size: 15px;
-  color: #eee;
-  height: 40px;
-  text-align: left;
-  -webkit-appearance: none;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: .1fr 1fr;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 35px;
-  border: none;
-  border-radius: 3px; }
-
-.w3l-footer-main .footer-14 .language-select {
-  margin-top: 35px;
-  position: relative; }
-
-.w3l-footer-main .footer-14 span.fa.fa-language {
-  position: absolute;
-  color: #eee;
-  font-size: 16px;
-  z-index: 9;
-  right: 15px;
-  top: 13px; }
-
-.w3l-footer-main .footer-14 .language-select select:focus {
-  outline: none; }
 
 .w3l-footer-main .footer-14 #movetop {
   display: none;
@@ -891,6 +854,34 @@ a.team-title span.fa {
 #strong{
   font-family: "Nunito Sans", sans-serif;
 }
+.colmn-1 {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.s-media-icons {
+  margin: 0 15px;
+}
+
+.s-media-icons a {
+  color: inherit; /* Ensures the icons take the link color */
+  text-decoration: none;
+}
+
+.s-media-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
 /* .column {
   text-align: center;
 } */
@@ -901,6 +892,34 @@ a.team-title span.fa {
   list-style: none;
 
 } */
-#social-media-de-icons li {
-  margin: 0 10px;
+/* 
+
+
+*/
+/* #link-bg, .fa-brands, .insta {
+  background-color: #023831;
+} */
+
+.no-background{
+  background-color: none;
+}
+
+.fa-linkedin {
+  color: #3b5999;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-instagram {
+  color: #e6653c;
+}
+
+.fa-facebook {
+  color: #3b5999;
 }
