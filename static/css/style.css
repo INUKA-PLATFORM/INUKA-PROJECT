@@ -100,8 +100,9 @@ ul li a {
 
 ul li a:hover {
     border-top-color: var(secondary-color);
-    background-color: #4C8B52;
+    /* background-color: #4C8B52; */
     color: var(text-dark);
+    border-bottom: 2px solid #4C8B52;
 }
 
 h3 {
@@ -352,10 +353,7 @@ ul li a {
     display: block;
 }
 
-ul li a:hover {
-    /* background-color: #4C8B52; */
-    /* border-radius: 50%; */
-}
+
 
 .dropdown-content {
     display: none;
@@ -543,13 +541,13 @@ ul li a:hover {
     height: 35px;
     line-height: 35px;
     display: block;
-    background: #343434;
+    /* background: #343434; */
     border-radius: var(--border-radius);
 }
 
-.w3l-footer-main .footer-14 .column ul li a:hover {
+/* .w3l-footer-main .footer-14 .column ul li a:hover {
     background: #fff;
-}
+} */
 
 .w3l-footer-main .footer-14 .column ul li span {
     color: #b9b9b9;
@@ -720,12 +718,7 @@ ul li a:hover {
     }
 }
 
-.w3l-bg {
-    background: url(../images/banner2.jpg) no-repeat center;
-    background-size: cover;
-    position: relative;
-    z-index: 0;
-}
+
 
 .w3l-bg:before {
     content: "";
@@ -1318,23 +1311,7 @@ a.team-title span.fa {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
-/*section {
-    margin-bottom: 10px;
-}*/
-/* h1, h2, h3 {
-    color: #333;
-} */
-/* p, ul {
-    color: #555;
-    line-height: 1.6;
-    width: 100%;
-} */
-/* ul {
-    padding-left: 5px;
-}
-li {
-    margin-bottom: 10px;
-} */
+
 #hero{
     margin: 10px 5px 10px 5px;
 }
@@ -1412,5 +1389,16 @@ li {
     margin-top: 10px;
     border-top: 1px solid #ddd;
     padding-top: 20px;
+}
+
+.s-media-icons a {
+    color: inherit; /* Ensures the icons take the link color */
+    text-decoration: none;
+    background: none; /* Removes background color */
+    display: flex; /* Aligns the icon within the link */
+    align-items: center; /* Centers icon vertically */
+    justify-content: center; /* Centers icon horizontally */
+    width: 50px; /* Optional: Set a fixed width if necessary */
+    height: 50px; /* Optional: Set a fixed height if necessary */
 }
 

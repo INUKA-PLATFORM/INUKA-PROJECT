@@ -1,0 +1,26 @@
+.objct_card_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  /* Arrange cards in rows */
+    gap: 20px; /* Add space between the cards */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.how_it_works_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.how_card_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  /* Arrange cards in rows */
+    gap: 30px;  /* Add space between the cards */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

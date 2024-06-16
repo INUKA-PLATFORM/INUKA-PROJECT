@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.crewpg {
+    font-size: 15px;
+    font-family: "Roboto" sans-serif;
+}
+
+.s_m_l {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sectn {
+    padding:  10rem 0;
+    background: #fff;
+}
+/* main-body{
+    padding: 10rem 0;
+    background-color: #fff;
+    margin-top: 100px;
+} */
+
+/* heading renamed team to resolve conflict in styling*/
+.team {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+/*heading*/
+.team::after {
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #45e19f;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3rem;
+} 
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.crew-card{
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.crew-card .card_img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%); 
+}
+
+.profile_img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -4.5rem;
+    z-index: 999;
+    border: 1rem solid #ebeef8;
+}
+
+.crew-card h1{
+    font-size: 2rem;
+    color: #333;
+    margin: 1.5rem 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.p_title {
+    color: #454444;
+    font-size: 1.4rem;
+    font-weight: 350;
+}
+
+.brief {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    font-style: oblique;
+    text-align: center;
+    color: #1c1249;
+    padding: 8px;
+    justify-content: center;
+}
+
+.crew-card .btn {
+    padding: 1rem 2.5rem;
+    background-color: #445ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
+}
+
+.crew-card .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, 0.2);
+}
+
+.crew-card .btn:active{
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.social_media_icons {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social_media_icons i {
+    font-size: 3rem;
+}
+
+.fa-linkedin {
+    color: #3b5999;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-twitter {
+    color: #55acee;
+}
+
+.fa-instagram {
+    color: #e6653c;
+}
+
+.fa-facebook {
+    color: #3b5999;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-facebook:hover, 
+.fa-instagram:hover,
+.fa-twitter:hover {
+    color: #5f99a1;
+}
+
+@media screen and (min-width: 700px) {
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .crew-card {
+        margin: 2rem;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+        .crew-card:nth-child(1) {
+            animation: fadeIn .5s .5s backwards;
+        }
+
+        .crew-card:nth-child(2) {
+            animation: fadeIn .5s 1s backwards;
+        }
+        .crew-card:nth-child(3) {
+            animation: fadeIn .5s 1.5s backwards;
+        }
+        .crew-card:nth-child(4) {
+            animation: fadeIn .5s 2s backwards;
+        }
+
+}
