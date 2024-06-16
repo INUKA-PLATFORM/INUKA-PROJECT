@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-from pathlib import PathF
+from pathlib import Path
 import os
 import dj_database_url
 from decouple import config,Csv
@@ -25,7 +25,7 @@ if config('MODE')=="dev":
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.mysql',
-         #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+           #'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': config('DB_NAME'),
            'USER': config('DB_USER'),
            'PASSWORD': config('DB_PASSWORD'),
