@@ -25,7 +25,7 @@ if config('MODE')=="dev":
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.mysql',
-         #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+           #'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': config('DB_NAME'),
            'USER': config('DB_USER'),
            'PASSWORD': config('DB_PASSWORD'),
@@ -56,9 +56,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', 'inuka-project.onrender.com']
 # CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app"]
 # ALLOWED_HOSTS = [".replit.dev", ".replit.app", 'localhost','127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app"]

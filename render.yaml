@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: your-django-app
+    env: python
+    plan: free
+    buildCommand: "
+      pip install -r requirements.txt &&
+      python manage.py collectstatic --no-input &&
+      python manage.py migrate"
+    startCommand: gunicorn django_project.wsgi
+    staticPublishPath: staticfiles
