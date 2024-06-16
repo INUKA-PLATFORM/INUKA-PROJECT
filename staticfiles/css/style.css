@@ -718,7 +718,12 @@ ul li a {
     }
 }
 
-
+/* .w3l-bg {
+    background: url(../images/banner2.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+} */
 
 .w3l-bg:before {
     content: "";
