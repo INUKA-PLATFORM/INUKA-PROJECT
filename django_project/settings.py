@@ -167,9 +167,14 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+
+# STATICFILES_DIRS=[
+#     BASE_DIR / "static",
+# ]
+
 # configuring the location for media // # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
