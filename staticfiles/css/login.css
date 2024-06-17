@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: rgb(76, 139, 82);
+    /*background-image: url();*/
+    background-size: cover;
+    background-position: center;
+}
+
+input[type="email"],input[type="password"]{
+    width: 50%;
+    padding: 2px;
+    margin: 10px 0 10px 0;;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.card{
+    margin-top: 16%;
+}
