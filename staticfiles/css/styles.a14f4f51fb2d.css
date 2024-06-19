@@ -21,7 +21,7 @@ h3 {
     font-family: "Nunito Sans", sans-serif;
 }
 
-#login-page{
+#login-page, .login-card {
     
     margin-top:9%;
 }
