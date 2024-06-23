@@ -15,7 +15,7 @@ def home(request):
 
 def public_register(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST, request.FILES)
         if form.is_valid():
             user=form.save(commit=False)
             user.is_active = False 
