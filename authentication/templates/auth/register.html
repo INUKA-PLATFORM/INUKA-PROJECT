@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid d-flex justify-content-center align-items-center" id="register-page">
-  <div class="col-md-6 mx-auto " id="register-card">
+  <div class="col-md-7 mx-auto " id="register-card">
     <div>
       {% if messages %}
       {% for message in messages %}
@@ -26,70 +26,208 @@
       </h4>
       <p class="text-center" id="par-register">REGISTER</p>
 
-      <form method="post" class="col-md-11 mx-auto">
+      <form method="post" class="col-md-11 mx-auto" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row g-3">
           <div class="col">
             <div class="form-group last mb-3">
               <label for="first_name" class="reg-firstname">First Name</label>
               {{ form.first_name }}
+              {% if form.first_name.errors %}
+              <div class="error text-danger">{{ form.first_name.errors }}</div>
+              {% endif %}
+
             </div>
           </div>
           <div class="col">
             <div class="form-group last mb-3">
-              <label for="last_name"class="reg-lastname">Last Name</label>
+              <label for="last_name" class="reg-lastname">Last Name</label>
               {{ form.last_name }}
+              {% if form.last_name.errors %}
+              <div class="error text-danger">{{ form.last_name.errors }}</div>
+              {% endif %}
             </div>
           </div>
           <div class="col">
             <div class="form-group last mb-3">
               <label for="first_name" class="reg-surname">Surname</label>
               {{ form.surname }}
+              {% if form.surname.errors %}
+              <div class="error text-danger">{{ form.surname.errors }}</div>
+              {% endif %}
             </div>
           </div>
         </div>
-        
+
         <div class="row g-3">
           <div class="col">
             <div class="form-group first mb-3">
               <label for="username" class="reg-username">Username</label>
               {{ form.username }}
+              {% if form.username.errors %}
+              <div class="error text-danger">{{ form.username.errors }}</div>
+              {% endif %}
             </div>
           </div>
           <div class="col">
             <div class="form-group last mb-3">
               <label for="student_id" class="reg-id">Student Reg No</label>
-              {{ form.student_id }}
+              {{ form.student_id_number }}
+              {% if form.student_id_number.errors %}
+              <div class="error text-danger">{{ form.student_id_number.errors }}</div>
+              {% endif %}
             </div>
           </div>
           <div class="col">
             <div class="form-group first mb-3">
               <label for="phonenumber" class="reg-phonenumber">Phone Number</label>
               {{ form.phone_number }}
+              {% if form.phone_number.errors %}
+              <div class="error text-danger">{{ form.phone_number.errors }}</div>
+              {% endif %}
+
             </div>
           </div>
         </div>
-        
 
-        <div class="form-group first mb-3">
-          <label for="email" class="reg-email">Email</label>
-          {{ form.email}}
+        <div class="row g-3">
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="email" class="reg-email">Email</label>
+              {{ form.email}}
+              {% if form.email.errors %}
+              <div class="error text-danger">{{ form.email.errors }}</div>
+              {% endif %}
+            </div>
+          </div>
+          <!-- <div class="col">
+            <div class="form-group first mb-3">
+              <label for="email" class="reg-email">Personal Contact</label>
+              {{ form.email}}
+            </div>
+          </div> -->
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="email" class="reg-email">Parents/Guardian Contact</label>
+              {{ form.guardian_contacts}}
+              {% if form.guardian_contacts.errors %}
+              <div class="form-error text-danger">{{ form.guardian_contacts.errors }}</div>
+              {% endif %}
+            </div>
+          </div>
         </div>
+        <div class="row g-3">
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="course" class="course">Course of Study</label>
+              {{ form.course}}
+              {% if form.course.errors %}
+              <div class="form-error text-danger">{{ form.course.errors }}</div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group first mb-3">
+              <label for="year_of_study" class="course">Year of Study</label>
+              {{ form.year_of_study}}
+              {% if form.year_of_study.errors %}
+              <div class="form-error text-danger">{{ form.year_of_study.errors }}</div>
+              {% endif %}
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="row g-3">
+          <div class="col">
+            <div class="mb-3">
+              <label for="student-id" class="student-id">Student ID Card<small>(Single pdf)</small></label>
+              {{ form.student_id}}
+              {% if form.student_id.errors %}
+              <div class="form-error text-danger">{{ form.student_id.errors }}</div>
+              {% endif %}
+              <!-- <input class="form-control" type="file" id="formFile"> -->
+            </div>
+          </div>
+
+          <!--National ID Card -->
+          <div class="col">
+            <div class="mb-3">
+              <label for="national-id" class="national-id">National ID Card <small>(Single pdf)</small></label>
+              {{ form.national_id}}
+              {% if form.national_id.errors %}
+              <div class="form-error text-danger">{{ form.national_id.errors }}</div>
+              {% endif %}
+              <!-- <input class="form-control" type="file" id="formFile"> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row g-3">
+          <div class="col">
+            <div class="mb-3">
+              <label for="phone-number" class="passport-phonenumber">Passport Photo<small>(Image)</small></label>
+              {{ form.passport_photo}}
+              {% if form.passport_photo.errors %}
+              <div class="error text-danger">{{ form.passport_photo.errors }}</div>
+              {% endif %}
+              <!-- <input class="form-control" type="file" id="formFile"> -->
+            </div>
+          </div>
+
+          <!--National ID Card -->
+          <div class="col">
+            <div class="mb-3">
+              <label for="recommendation" class="recommendation">Letter of Recommendation <small>(Single
+                  pdf)</small></label>
+              {{form.letter_of_recommendation}}
+              {% if form.letter_of_recommendation.errors %}
+              <div class="error text-danger">{{ form.letter_of_recommendation.errors }}</div>
+              {% endif %}
+              <!-- <input class="form-control" type="file" id="formFile"> -->
+            </div>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="financial statements" class="financial-statements">Attach financial statements<small>(Single
+              Pdf)</small></label>
+          {{form.financial_statements}}
+          {% if form.financial_statements %}
+          <div class="error text-danger">{{ form.financial_statements.errors }}</div>
+          {% endif %}
+         
+        </div>
+        <div class="form-group mb-3">
+          <label for="reason-for-application" class="reason-for-application">Reason for Application</label>
+          {{form.reason_for_application}}
+          {% if form.reason_for_application %}
+          <div class="error text-danger">{{ form.reason_for_application.errors }}</div>
+          {% endif %}
+          
+        </div>
+
         <div class="row g-3">
           <div class="col">
             <div class="form-group last mb-3">
               <label for="password" class="reg-password">Password</label>
               {{ form.password1 }}
+              {% if form.password1 %}
+              <div class="error text-danger">{{ form.password1.errors }}</div>
+              {% endif %}
             </div>
           </div>
           <div class="col">
             <div class="form-group last mb-3">
-              <label for="password"class="reg-password">Confirm Password</label>
+              <label for="password" class="reg-password">Confirm Password</label>
               {{ form.password2 }}
+              {% if form.password2 %}
+              <div class="error text-danger">{{ form.password2.errors }}</div>
+              {% endif %}
             </div>
           </div>
         </div>
-        
+
         <!-- <div class="form-group last mb-3">
           <label for="password" class="reg-password">Password</label>
           {{ form.password1 }}
@@ -112,35 +250,16 @@
             </label>
           </div>
         </div> -->
-        <!-- <div class="alert alert-danger" role="alert"> -->
-          <span class="text-error ">{{ form.errors }}</span>
-        <!-- </div> -->
-        <div class="d-grid gap-2">
-          <input type="submit" value="Register" class="btn d-grid gap-2 mt-1"
-          id="login-buuton">
-        </div>
         
+        <div class="d-grid gap-2">
+          <input type="submit" value="Register" class="btn d-grid gap-2 mt-1" id="login-buuton">
+        </div>
+
       </form>
       <!-- Register buttons -->
       <div class="text-center p-2" id="login-btns">
-        <!-- <p class="not-member">or sign up with:</p>
-       
-        <a class="btn" href="#!" role="button" id="facebook">
-          <i class="fab fa-facebook me-2"></i>
-          Facebook
-        </a>
-        
-        <a class="btn text-white" id="twitter" href="#!" role="button">
-          <i class="fab fa-twitter me-2"></i>
-          Twitter
-        </a>
-        
-        <a class="btn" id="google" href="#!" role="button">
-          <i class="fab fa-google me-2"></i>
-          Google
-        </a>-->
 
-      </div> 
+      </div>
     </div>
   </div>
 </div>

@@ -14,16 +14,18 @@ from pathlib import Path
 import os
 import dj_database_url
 from decouple import config,Csv
+# cloudinary to store files and media (pdf and images)
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
 # Cloudinary configurations
+# Fetch Cloudinary configuration values from the .env file
 cloudinary.config(
     cloud_name = config('CLOUDINARY_CLOUD_NAME'),
     api_key = config('CLOUDINARY_API_KEY'),
-    api_secret = config('CLOUDINARY_API_SECRET')
-
+    api_secret = config('CLOUDINARY_API_SECRET'),
+    secure=True
 );
 
 # DB configurations
@@ -59,10 +61,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -143,7 +141,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -166,24 +163,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-# STATIC_URL = 'static/'
-# MEDIA_URL = 'media/'
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-# STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-# STATICFILES_DIRS=[
-#     BASE_DIR / "static",
-# ]
-
 # configuring the location for media // # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 if not DEBUG:
@@ -199,7 +178,6 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # change Auth model to use our new model User

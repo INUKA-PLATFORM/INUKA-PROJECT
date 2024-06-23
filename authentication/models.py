@@ -5,17 +5,16 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     is_student= models.BooleanField('Is student', default=True)
-    student_id = models.CharField(max_length=20, unique=True)
-    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    student_id_number = models.CharField(max_length=20, unique=True)
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
     surname = models.CharField(max_length=30, blank=True, null=True)
     student_id = CloudinaryField('file', blank=True, null=True)
     national_id = CloudinaryField('file', blank=True, null=True)
     passport_photo = CloudinaryField('image', blank=True, null=True)
     course = models.CharField(max_length=100, blank=True, null=True)
-    year_of_study = models.CharField(max_length=10, blank=True, null=True)
+    year_of_study = models.CharField(max_length=20, blank=True, null=True)
     financial_statements = CloudinaryField('file', blank=True, null=True)
     guardian_contacts = models.CharField(max_length=255, blank=True, null=True)
-    applicants_contact = models.CharField(max_length=255, blank=True, null=True)
     reason_for_application = models.TextField(blank=True, null=True)
     letter_of_recommendation = CloudinaryField('file', blank=True, null=True)
     
