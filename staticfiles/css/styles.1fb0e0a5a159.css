@@ -181,7 +181,7 @@ strong {
     font-weight: 700;
 }
 .reg-password, .reg-email, .reg-username, .reg-lastname,
- .reg-firstname, .reg-surname, .reg-id, .reg-phonenumber, .recommendation, .passport-phonenumber, .national-id, .student-id, .course, .reason-for-application, .financial-statements{
+ .reg-firstname, .reg-surname, .reg-id, .reg-phonenumber, .form-label{
     font-weight: 700;
 }
 
