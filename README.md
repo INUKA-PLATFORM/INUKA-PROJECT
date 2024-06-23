@@ -125,6 +125,8 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Live Site
 
+https://inuka-project.onrender.com/
+
 ## Contributor's Info
 
   

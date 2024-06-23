@@ -21,12 +21,17 @@ import cloudinary.api
 
 # Cloudinary configurations
 # Fetch Cloudinary configuration values from the .env file
-cloudinary.config(
-    cloud_name = config('CLOUDINARY_CLOUD_NAME'),
-    api_key = config('CLOUDINARY_API_KEY'),
-    api_secret = config('CLOUDINARY_API_SECRET'),
-    secure=True
-);
+# cloudinary.config(
+#     cloud_name = config('CLOUDINARY_CLOUD_NAME'),
+#     api_key = config('CLOUDINARY_API_KEY'),
+#     api_secret = config('CLOUDINARY_API_SECRET'),
+#     secure=True
+# );
+cloudinary.config( 
+  cloud_name = 'dnadlnwbg', 
+  api_key = '139684565838184', 
+  api_secret = 'Txu5juptBp2EFJvZKCgWfokofK4' 
+)
 
 # DB configurations
 MODE=config("MODE", default="dev")
@@ -186,3 +191,7 @@ AUTH_USER_MODEL = 'authentication.User'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://inuka-project.onrender.com/'
+]
